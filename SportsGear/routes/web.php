@@ -11,15 +11,19 @@
 |
 */
 
-//Route::get('/',function()
-//{
-	//$people =[''];
-	/*return view('welcome',['people' =>$people]);
-	return view('welcome',compact('people'));
-	return view('welcome')->with('people',$people);
-	return view('welcome')->withPeople($people);
-	return View::make('welcome')->withPeople($people);*/
-	Route::get('/',function()
-	{
-return view ('welcome');
-	});
+Route::get('/', 'PagesController@home');
+
+Route::get('/register', 'PagesController@register');
+
+Route::get('/login', 'PagesController@login');
+
+Route::get('/products', 'PagesController@products');
+
+/**
+* Needed?
+*/
+Route::get('/product', 'PagesController@product');
+
+Route::get('/cart', 'PagesController@cart');
+
+Route::get('/confirmation', 'PagesController@confirmation');
