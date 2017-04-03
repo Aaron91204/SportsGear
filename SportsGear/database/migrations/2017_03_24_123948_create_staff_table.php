@@ -30,7 +30,7 @@ class CreateStaffTable extends Migration
      */
     public function down()
     {
-                Schema::dropIfExists('staff');
+        Schema::dropIfExists('staff');
 
     }
 }

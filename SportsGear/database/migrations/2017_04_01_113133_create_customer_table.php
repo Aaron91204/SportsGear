@@ -21,6 +21,7 @@ class CreateCustomerTable extends Migration
             $table->string('postcode');
             $table->string('telephone');
             $table->string('email');
+            
 
         });
     }
