@@ -11,10 +11,10 @@ class Order extends Model
 
     //Relationships
     public function customer(){
-    	return $this->belongsTo('Customer');
+    	return $this->belongsTo('App\Customer');
     }
 
     public  function productOrders(){
-    	return $this->hasMany('ProductOrder');
+    	return $this->hasMany('App\ProductOrder', 'foriegn_key');
     }
 }
