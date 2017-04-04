@@ -19,6 +19,8 @@ Route::get('/login', 'PagesController@login');
 
 Route::get('/products', 'PagesController@products');
 
+
+
 /**
 * Needed?
 */
