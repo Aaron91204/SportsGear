@@ -52,51 +52,7 @@ class DatabaseSeeder extends Seeder
                 'username'=>'Spooner',
                 'password'=>'Golf',
             ]);
-            DB::table('customer')->insert
-            ([
-                'firstname'=>'Alexis',
-                'surname'=>'Sanchez',
-                'address'=>'204 Hillhead Road',
-                'postcode'=>'BT399LP',
-                'telephone'=>'93322609',
-                'email'=>'CarryArsenal@ymail.com',
-            ]);
-            DB::table('customer')->insert
-            ([
-                'firstname'=>'Arsene',
-                'surname'=>'Wenger',
-                'address'=>'77 French Land',
-                'postcode'=>'BT56THG',
-                'telephone'=>'95544887',
-                'email'=>'LeavePlz@ymail.com',
-            ]);
-            DB::table('customer')->insert
-            ([
-                'firstname'=>'Mesut',
-                'surname'=>'Ozil',
-                'address'=>'25 Hillhead Road',
-                'postcode'=>'BT398LP',
-                'telephone'=>'93321231',
-                'email'=>'Eyes@ymail.com',
-            ]);
-            DB::table('customer')->insert
-            ([
-                'firstname'=>'Petr',
-                'surname'=>'Cech',
-                'address'=>'77 Czech Land',
-                'postcode'=>'BT3123P',
-                'telephone'=>'36652529',
-                'email'=>'Hats@ymail.com',
-            ]);
-            DB::table('customer')->insert
-            ([
-                'firstname'=>'Thomas',
-                'surname'=>'Irvine',
-                'address'=>'204 Ballysillian',
-                'postcode'=>'BT35L75',
-                'telephone'=>'254845621',
-                'email'=>'TIrvine@ymail.com',
-            ]);
+            
             DB::table('products')->insert
             ([
                 'product_name'=>'Titleist Pro V',
