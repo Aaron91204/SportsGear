@@ -29,3 +29,6 @@ Route::get('/product', 'PagesController@product');
 Route::get('/cart', 'PagesController@cart');
 
 Route::get('/confirmation', 'PagesController@confirmation');
+Auth::routes();
+
+Route::get('/home','HomeController@index');
