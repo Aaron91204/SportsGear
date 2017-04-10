@@ -26,9 +26,9 @@ class PagesController extends Controller
     	return view('pages.login');
     }
 
-    public function products(){
+    /*public function products(){
     	return view('pages.products');
-    }
+    }*/
 
     public function product(){
     	return view('pages.product');
@@ -36,6 +36,10 @@ class PagesController extends Controller
 
     public function cart(){
     	return view('cart');
+    }
+
+    public function wishlist(){
+        return view('wishlist');
     }
 
     public function confirmation(){
