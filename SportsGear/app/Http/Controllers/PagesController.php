@@ -10,19 +10,11 @@ use App\Customer;
 class PagesController extends Controller
 {
      public function home(){
-        /*$staff = Staff::whereFirstname('Iain')->first();
-        $products = Product::whereCategory('Cricket');*/
 
-
-
-    	return view('welcome');
+        $products = Product::all();
+        return view('welcome')->with('products', $products);
+    	//return view('welcome');
         
-
-        /*echo $staff->firstname;
-        echo $staff->surname;
-        echo $staff->email;
-        echo $staff->username;
-        echo $staff->password;*/
 
     }
 
