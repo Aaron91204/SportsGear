@@ -16,11 +16,9 @@
         @endif
 
         <div class="jumbotron text-center clearfix">
-            <h2>Laravel Shopping Cart Example</h2>
-            <p>An example Laravel App that demos the basic functionality of a typical e-commerce shopping cart.</p>
-            <p>
-                <a href="http://andremadarang.com/implementing-a-shopping-cart-in-laravel/" class="btn btn-primary btn-lg" target="_blank">Blog Post</a>
-                <a href="https://github.com/drehimself/laravel-shopping-cart-example" class="btn btn-success btn-lg" target="_blank">GitHub Repo</a>
+            <h2>This will be the Home Page</h2>
+            <p>Here we'll have a selection of products (picked at random) to display to the customer.</p>
+            <p>For now, we'll just have the full list of products
             </p>
         </div> <!-- end jumbotron -->
 
@@ -30,7 +28,7 @@
                     <div class="col-md-3">
                         <div class="thumbnail">
                             <div class="caption text-center">
-                                <a href="{{ url('shop', [$product->slug]) }}"><img src="{{ asset('images/' . $product->img) }}" alt="product" class="img-responsive"></a>
+                                <a href="{{ url('shop', [$product->slug]) }}"><img src="{{ asset('images/' . $product->img) . '.jpg' }}" alt="product" class="img-responsive"></a>
                                 <a href="{{ url('shop', [$product->slug]) }}"><h3>{{ $product->product_name }}</h3>
                                 <p>£{{ $product->cost }}</p>
                                 </a>
