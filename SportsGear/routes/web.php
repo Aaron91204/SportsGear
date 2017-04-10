@@ -24,9 +24,11 @@ Route::get('/products', 'PagesController@products');
 /**
 * Needed?
 */
-Route::get('/product', 'PagesController@product');
+//Route::get('/product', 'PagesController@product');
 
 Route::get('/cart', 'PagesController@cart');
+
+Route::get('/wishlist', 'PagesController@wishlist');
 
 Route::get('/confirmation', 'PagesController@confirmation');
 
