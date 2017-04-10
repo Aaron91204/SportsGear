@@ -58,357 +58,408 @@ class DatabaseSeeder extends Seeder
                 'product_name'=>'Titleist Pro V',
                 'category'=>'Golf',
                 'quantity'=>'100',
-                'cost(£)'=>'5',
+                'img'=>'TitleistProV1',
+                'cost'=>'5',
             ]);
              DB::table('products')->insert
             ([
                 'product_name'=>'Bow',
                 'category'=>'Archery',
                 'quantity'=>'50',
-                'cost(£)'=>'20.34',
+                'img'=>'Bow',
+                'cost'=>'20.34',
             ]);
              DB::table('products')->insert
             ([
                 'product_name'=>'Bat',
                 'category'=>'Baseball',
                 'quantity'=>'50',
-                'cost(£)'=>'14.39',
+                'img'=>'BaseBallBat',
+                'cost'=>'14.39',
             ]);
              DB::table('products')->insert
             ([
                 'product_name'=>'Ball',
                 'category'=>'Baseball',
                 'quantity'=>'50',
-                'cost(£)'=>'5.94',
+                'img'=>'BaseBallBall',
+                'cost'=>'5.94',
             ]);
             DB::table('products')->insert
             ([
                 'product_name'=>'Ball',
                 'category'=>'Basketball',
                 'quantity'=>'50',
-                'cost(£)'=>'11.99',
+                'img'=>'BasketBallBall',
+                'cost'=>'11.99',
             ]);
             DB::table('products')->insert
             ([
                 'product_name'=>'Ball 6pk',
                 'category'=>'Cricket',
                 'quantity'=>'50',
-                'cost(£)'=>'39',
+                'img'=>'CricketBall',
+                'cost'=>'39.00',
             ]);
             DB::table('products')->insert
             ([
                 'product_name'=>'Wicketkeeper pads',
                 'category'=>'Cricket',
                 'quantity'=>'50',
-                'cost(£)'=>'17.94',
+                'img'=>'CricketWicketKeeperPads',
+                'cost'=>'17.94',
             ]);
             DB::table('products')->insert
             ([
                 'product_name'=>'Wicketkepper gloves',
                 'category'=>'Cricket',
                 'quantity'=>'50',
-                'cost(£)'=>'22.74',
+                'img'=>'CricketWicketKeeperGloves',
+                'cost'=>'22.74',
             ]);
             DB::table('products')->insert
             ([
                 'product_name'=>'Stumps',
                 'category'=>'Cricket',
                 'quantity'=>'50',
-                'cost(£)'=>'31.14',
+                'img'=>'CricketStumps',
+                'cost'=>'31.14',
             ]);
             DB::table('products')->insert
             ([
                 'product_name'=>'Helmet',
                 'category'=>'Cricket',
                 'quantity'=>'50',
-                'cost(£)'=>'35.94',
+                'img'=>'CricketHelmet',
+                'cost'=>'35.94',
             ]);
             DB::table('products')->insert
             ([
                 'product_name'=>'Net Ring',
                 'category'=>'Basketball',
                 'quantity'=>'50',
-                'cost(£)'=>'95.94',
+                'img'=>'CricketBackBoard',
+                'cost'=>'95.94',
             ]);
             DB::table('products')->insert
             ([
                 'product_name'=>'Backboard',
                 'category'=>'Basketball',
                 'quantity'=>'50',
-                'cost(£)'=>'103.17',
+                'img'=>'CricketBackBoard',
+                'cost'=>'103.17',
             ]);
             DB::table('products')->insert
             ([
                 'product_name'=>'Size 4 Ball',
                 'category'=>'Football',
                 'quantity'=>'50',
-                'cost(£)'=>'5.99',
+                'img'=>'FootballSize4',
+                'cost'=>'5.99',
             ]);
             DB::table('products')->insert
             ([
                 'product_name'=>'Goal Net',
                 'category'=>'Football',
                 'quantity'=>'50',
-                'cost(£)'=>'47.94',
+                'img'=>'FootballGoalNet',
+                'cost'=>'47.94',
             ]);
             DB::table('products')->insert
             ([
                 'product_name'=>'Size 5 Ball',
                 'category'=>'Football',
                 'quantity'=>'50',
-                'cost(£)'=>'13,14',
+                'img'=>'FootballSize5',
+                'cost'=>'13.14',
             ]);
             DB::table('products')->insert
             ([
                 'product_name'=>'Stick',
                 'category'=>'Hockey',
                 'quantity'=>'50',
-                'cost(£)'=>'20',
+                'img'=>'HockeyStick',
+                'cost'=>'20.00',
             ]);
             DB::table('products')->insert
             ([
                 'product_name'=>'Shin Guards',
                 'category'=>'Hockey',
                 'quantity'=>'50',
-                'cost(£)'=>'4.74',
+                'img'=>'HockeyShinGuards',
+                'cost'=>'4.74',
             ]);
             DB::table('products')->insert
             ([
                 'product_name'=>'Helmet',
                 'category'=>'Hockey',
                 'quantity'=>'50',
-                'cost(£)'=>'71.94',
+                'img'=>'HockeyHelmet',
+                'cost'=>'71.94',
             ]);
             DB::table('products')->insert
             ([
                 'product_name'=>'Ball 6pk',
                 'category'=>'Hockey',
                 'quantity'=>'50',
-                'cost(£)'=>'15.54',
+                'img'=>'HockeyBall6pk',
+                'cost'=>'15.54',
             ]);
             DB::table('products')->insert
             ([
                 'product_name'=>'Net',
                 'category'=>'Hockey',
                 'quantity'=>'50',
-                'cost(£)'=>'135',
+                'img'=>'HockeyNet',
+                'cost'=>'135',
             ]);
             DB::table('products')->insert
             ([
                 'product_name'=>'Post',
                 'category'=>'Netball',
                 'quantity'=>'50',
-                'cost(£)'=>'191.94',
+                'img'=>'NetballPost',
+                'cost'=>'191.94',
             ]);
             DB::table('products')->insert
             ([
                 'product_name'=>'Bibs',
                 'category'=>'Netball',
                 'quantity'=>'50',
-                'cost(£)'=>'47.94',
+                'img'=>'NetballBibs',
+                'cost'=>'47.94',
             ]);
             DB::table('products')->insert
             ([
                 'product_name'=>'Size 5 Ball',
                 'category'=>'Netball',
                 'quantity'=>'50',
-                'cost(£)'=>'10.74',
+                'img'=>'NetballSize5Ball',
+                'cost'=>'10.74',
             ]);
             DB::table('products')->insert
             ([
                 'product_name'=>'Net',
                 'category'=>'Badminton',
                 'quantity'=>'50',
-                'cost(£)'=>'26.65',
+                'img'=>'BadmintonNet',
+                'cost'=>'26.65',
             ]);
             DB::table('products')->insert
             ([
                 'product_name'=>'Net Post',
                 'category'=>'Badminton',
                 'quantity'=>'50',
-                'cost(£)'=>'461.89',
+                'img'=>'BadmintonNetPost',
+                'cost'=>'461.89',
             ]);
             DB::table('products')->insert
             ([
                 'product_name'=>'Shuttlecock',
                 'category'=>'Badminton',
                 'quantity'=>'50',
-                'cost(£)'=>'9.54',
+                'img'=>'BadmintonShuttleCock',
+                'cost'=>'9.54',
             ]);
             DB::table('products')->insert
             ([
                 'product_name'=>'Racquet',
                 'category'=>'Badminton',
                 'quantity'=>'50',
-                'cost(£)'=>'18.55',
+                'img'=>'BadmintonRacquet',
+                'cost'=>'18.55',
             ]);
             DB::table('products')->insert
             ([
                 'product_name'=>'Ball 6pk',
                 'category'=>'Tennis',
                 'quantity'=>'50',
-                'cost(£)'=>'15.94',
+                'img'=>'TennisBall6pk',
+                'cost'=>'15.94',
             ]);
             DB::table('products')->insert
             ([
                 'product_name'=>'Net',
                 'category'=>'Tennis',
                 'quantity'=>'50',
-                'cost(£)'=>'154.80',
+                'img'=>'TennisNet',
+                'cost'=>'154.80',
             ]);
             DB::table('products')->insert
             ([
                 'product_name'=>'Beam Mat',
                 'category'=>'Gymnastics',
                 'quantity'=>'50',
-                'cost(£)'=>'239.94',
+                'img'=>'GymBeamMat',
+                'cost'=>'239.94',
             ]);
             DB::table('products')->insert
             ([
                 'product_name'=>'Balls',
                 'category'=>'Squash',
                 'quantity'=>'50',
-                'cost(£)'=>'27.60',
+                'img'=>'TennisBall6pk',
+                'cost'=>'27.60',
             ]);
             DB::table('products')->insert
             ([
                 'product_name'=>'Racquet',
                 'category'=>'Tennis',
                 'quantity'=>'50',
-                'cost(£)'=>'16.64',
+                'img'=>'TennisRacquet',
+                'cost'=>'16.64',
             ]);
             DB::table('products')->insert
             ([
                 'product_name'=>'Racquet',
                 'category'=>'Squash',
                 'quantity'=>'50',
-                'cost(£)'=>'12.78',
+                'img'=>'SquashRacquet',
+                'cost'=>'12.78',
             ]);
             DB::table('products')->insert
             ([
                 'product_name'=>'Bat',
                 'category'=>'Table Tennis',
                 'quantity'=>'50',
-                'cost(£)'=>'5.94',
+                'img'=>'TableTennisBat',
+                'cost'=>'5.94',
             ]);
             DB::table('products')->insert
             ([
                 'product_name'=>'Net',
                 'category'=>'Table Tennis',
                 'quantity'=>'50',
-                'cost(£)'=>'9.54',
+                'img'=>'TableTennisNet',
+                'cost'=>'9.54',
             ]);
             DB::table('products')->insert
             ([
                 'product_name'=>'Ball 6pk',
                 'category'=>'Table Tennis',
                 'quantity'=>'50',
-                'cost(£)'=>'3',
+                'img'=>'TableTennisBall6pk',
+                'cost'=>'3',
             ]);
             DB::table('products')->insert
             ([
                 'product_name'=>'Table',
                 'category'=>'Table Tennis',
                 'quantity'=>'50',
-                'cost(£)'=>'239.94',
+                'img'=>'TableTennisTable',
+                'cost'=>'239.94',
             ]);
             DB::table('products')->insert
             ([
                 'product_name'=>'Ball',
                 'category'=>'VolleyBall',
                 'quantity'=>'50',
-                'cost(£)'=>'16.64',
+                'img'=>'VolleyBallBall',
+                'cost'=>'16.64',
             ]);
             DB::table('products')->insert
             ([
                 'product_name'=>'Net',
                 'category'=>'VolleyBall',
                 'quantity'=>'50',
-                'cost(£)'=>'41.94',
+                'img'=>'VolleyBallNet',
+                'cost'=>'41.94',
             ]);
             DB::table('products')->insert
             ([
                 'product_name'=>'Post',
                 'category'=>'VolleyBall',
                 'quantity'=>'50',
-                'cost(£)'=>'582.89',
+                'img'=>'VolleyBallPosts',
+                'cost'=>'582.89',
             ]);
             DB::table('products')->insert
             ([
                 'product_name'=>'Stick',
                 'category'=>'Hurling',
                 'quantity'=>'50',
-                'cost(£)'=>'11.94',
+                'img'=>'HurlingStick',
+                'cost'=>'11.94',
             ]);
             DB::table('products')->insert
             ([
                 'product_name'=>'Sliotar',
                 'category'=>'Hurling',
                 'quantity'=>'50',
-                'cost(£)'=>'7.14',
+                'img'=>'HurlingSliotar',
+                'cost'=>'7.14',
             ]);
             DB::table('products')->insert
             ([
                 'product_name'=>'Helmet',
                 'category'=>'Hurling',
                 'quantity'=>'50',
-                'cost(£)'=>'71.94',
+                'img'=>'HurlingHelmet',
+                'cost'=>'71.94',
             ]);
             DB::table('products')->insert
             ([
                 'product_name'=>'Football',
                 'category'=>'Gaelic',
                 'quantity'=>'50',
-                'cost(£)'=>'8.34',
+                'img'=>'GaelicFootball',
+                'cost'=>'8.34',
             ]);
             DB::table('products')->insert
             ([
                 'product_name'=>'Mat',
                 'category'=>'Judo',
                 'quantity'=>'50',
-                'cost(£)'=>'41.94',
+                'img'=>'JudoMat',
+                'cost'=>'41.94',
             ]);
             DB::table('products')->insert
             ([
                 'product_name'=>'Punch Bag',
                 'category'=>'Boxing',
                 'quantity'=>'50',
-                'cost(£)'=>'64.94',
+                'img'=>'BoxingPunchBag',
+                'cost'=>'64.94',
             ]);
             DB::table('products')->insert
             ([
                 'product_name'=>'Skipping Rope',
                 'category'=>'Boxing',
                 'quantity'=>'50',
-                'cost(£)'=>'17.09',
+                'img'=>'BoxingSkippingRope',
+                'cost'=>'17.09',
             ]);
             DB::table('products')->insert
             ([
                 'product_name'=>'Gloves',
                 'category'=>'Boxing',
                 'quantity'=>'50',
-                'cost(£)'=>'19.94',
+                'img'=>'BoxingGloves',
+                'cost'=>'19.94',
             ]);
             DB::table('products')->insert
             ([
                 'product_name'=>'HeadGear',
                 'category'=>'Boxing',
                 'quantity'=>'50',
-                'cost(£)'=>'23.94',
+                'img'=>'BoxingHeadGear',
+                'cost'=>'23.94',
             ]);
             DB::table('products')->insert
             ([
                 'product_name'=>'SpeedBall',
                 'category'=>'Boxing',
                 'quantity'=>'50',
-                'cost(£)'=>'22.74',
+                'img'=>'BoxingSpeedBall',
+                'cost'=>'22.74',
             ]);
             DB::table('products')->insert
             ([
                 'product_name'=>'Ball',
                 'category'=>'American Football',
                 'quantity'=>'50',
-                'cost(£)'=>'19.14',
+                'img'=>'AmericanFootballBall',
+                'cost'=>'19.14',
             ]);
     }
 }

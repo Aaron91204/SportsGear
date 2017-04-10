@@ -18,7 +18,8 @@ class CreateProductTable extends Migration
             $table->string('product_name');
             $table->string('category');
             $table->string('quantity');
-            $table->string('cost(£)');
+            $table->string('img');
+            $table->decimal('cost', 10,2);
         });
     }
 
