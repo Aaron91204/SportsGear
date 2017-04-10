@@ -48,9 +48,14 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'name' => 'required|max:255',
+            'firstname' => 'required|max:255',
+            'surname' => 'required|max:255',
+            'address' => 'required|max:255',
+            'postcode' => 'required|max:8',
+            'telephone' => 'required|max:11',
             'email' => 'required|email|max:255|unique:users',
-            'password' => 'required|min:6|confirmed',
+            'username'=> 'required|max:255',
+            'password' => 'required|min:4|confirmed',
         ]);
     }
 
@@ -63,8 +68,13 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
         return User::create([
-            'name' => $data['name'],
+            'firstname' => $data['firstname'],
+            'surname' => $data['surname'],
+            'address' => $data['address'],
+            'postcode' => $data['postcode'],
+            'telephone' => $data['telephone'],
             'email' => $data['email'],
+            'username' => $data['username'],
             'password' => bcrypt($data['password']),
         ]);
     }

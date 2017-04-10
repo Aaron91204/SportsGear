@@ -79,11 +79,27 @@
             @endif
 
             <div class="content">
-                <div class="title m-b-md">
+                <div class="title">
                     Database Work
-                </div>
+                    <div>
+
+
+                    @if(empty($products))
+                        <h5>There are no Products</h5>
+                    @else
+                    <h5>Product deets</h5>
+
+                    <ul>
+                    @foreach($products as $product)
+                        <li>{{$product->product_name}}</li>
+                        <li>{{$product->cost(£)}}</li>
+                    @endforeach
+                    </ul>
+                    @endif
+                    </div>
                 </div>
             </div>
         </div>
+        
     </body>
 </html>
