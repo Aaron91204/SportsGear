@@ -28,8 +28,8 @@
                     <div class="col-md-3">
                         <div class="thumbnail">
                             <div class="caption text-center">
-                                <a href="{{ url('product', [$product->product_name]) }}"><img src="{{ asset('images/' . $product->img) . '.jpg' }}" alt="product" class="img-responsive"></a>
-                                <a href="{{ url('product', [$product->product_name]) }}"><h3>{{ $product->product_name }}</h3>
+                                <a href="{{ url('shop', [$product->slug]) }}"><img src="{{ asset('images/' . $product->img) . '.jpg' }}" alt="product" class="img-responsive"></a>
+                                <a href="{{ url('shop', [$product->slug]) }}"><h3>{{ $product->product_name }}</h3>
                                 <p>£{{ $product->cost }}</p>
                                 </a>
                             </div> <!-- end caption -->

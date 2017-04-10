@@ -1,4 +1,4 @@
-@extends('master')
+@extends('layouts.app')
 
 @section('content')
 
@@ -10,11 +10,11 @@
 
         <div class="row">
             <div class="col-md-4">
-                <img src="{{ asset('image/' . $product->image . '.jpg') }}" alt="product" class="img-responsive">
+                <img src="{{ asset('images/' . $product->img . '.jpg') }}" alt="product" class="img-responsive">
             </div>
 
             <div class="col-md-8">
-                <h3>${{ $product->cost }}</h3>
+                <h3>£{{ $product->cost }}</h3>
                 <form action="{{ url('/cart') }}" method="POST" class="side-by-side">
                     {!! csrf_field() !!}
                     <input type="hidden" name="id" value="{{ $product->id }}">
@@ -47,9 +47,9 @@
                 <div class="col-md-3">
                     <div class="thumbnail">
                         <div class="caption text-center">
-                            <a href="{{ url('shop', [$product->product_name]) }}"><img src="{{ asset('image/' . $product->image . '.jpg') }}" alt="product" class="img-responsive"></a>
+                            <a href="{{ url('shop', [$product->product_name]) }}"><img src="{{ asset('images/' . $product->img . '.jpg') }}" alt="product" class="img-responsive"></a>
                             <a href="{{ url('shop', [$product->product_name]) }}"><h3>{{ $product->product_name }}</h3>
-                            <p>{{ $product->cost }}</p>
+                            <p>£{{ $product->cost }}</p>
                             </a>
                         </div> <!-- end caption -->
 
