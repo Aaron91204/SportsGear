@@ -8,10 +8,12 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'Sports Gear') }}</title>
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 
     <!-- Scripts -->
     <script>
@@ -21,6 +23,7 @@
     </script>
 </head>
 <body>
+    <header>
     <div id="app">
         <nav class="navbar navbar-default navbar-static-top">
             <div class="container">
@@ -36,7 +39,7 @@
 
                     <!-- Branding Image -->
                     <a class="navbar-brand" href="{{ url('/') }}">
-                        {{ config('app.name', 'Laravel') }}
+                        {{ config('app.name', 'Sports Gear') }}
                     </a>
                 </div>
 
@@ -55,7 +58,7 @@
                         @else
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                    {{ Auth::user()->name }} <span class="caret"></span>
+                                    {{ Auth::user()->firstname }} <span class="caret"></span>
                                 </a>
 
                                 <ul class="dropdown-menu" role="menu">
@@ -73,13 +76,22 @@
                                 </ul>
                             </li>
                         @endif
+                            <li ><a href="{{ url('/wishlist') }}">Wishlist ({{ Cart::instance('wishlist')->count(false) }})</a></li>
+                            <li ><a href="{{ url('/cart') }}">Cart ({{ Cart::instance('default')->count(false) }})</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
+    </header>
 
         @yield('content')
     </div>
+
+    <footer>
+      <div class="container">
+        <p class="text-muted"><a href="#">About Us</a></p>
+      </div>
+    </footer>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
