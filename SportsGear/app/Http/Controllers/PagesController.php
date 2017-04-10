@@ -43,7 +43,7 @@ class PagesController extends Controller
     }
 
     public function cart(){
-    	return view('pages.cart');
+    	return view('cart');
     }
 
     public function confirmation(){
