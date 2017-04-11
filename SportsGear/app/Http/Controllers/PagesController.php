@@ -11,7 +11,7 @@ class PagesController extends Controller
 {
      public function home(){
 
-        $products = Product::all();
+        $products = Product::get()->random(8);
         return view('welcome')->with('products', $products);
     	//return view('welcome');
         
