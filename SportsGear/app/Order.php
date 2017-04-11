@@ -11,7 +11,7 @@ class Order extends Model
 
     //Relationships
     public function customer(){
-    	return $this->belongsTo('App\Customer');
+    	return $this->belongsTo('App\User');
     }
 
     public  function productOrders(){

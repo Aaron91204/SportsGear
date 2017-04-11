@@ -31,4 +31,8 @@ class User extends Authenticatable
     public function order(){
         return $this->hasMany('App\Order', 'foreign_key');
     }
+
+    public function contact(){
+        return $this->hasMany('App\Contact', 'foreign_key', 'email');
+    }
 }
