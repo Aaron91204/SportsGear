@@ -11,25 +11,22 @@
 |
 */
 
-Route::get('/', 'PagesController@home');
+Route::get('/', 'GuestController@home');
 
-Route::get('/register', 'PagesController@register');
-
-Route::get('/login', 'PagesController@login');
-
-Route::get('/products', 'PagesController@products');
+Route::get('/products', 'GuestController@products');
 
 
-
-Route::get('/cart', 'PagesController@cart');
+Route::get('/cart', 'GuestController@cart');
 
 Route::get('/wishlist', 'PagesController@wishlist');
 
-Route::get('/confirmation', 'PagesController@confirmation');
+Route::get('/confirmation', 'UserController@confirmation');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index');
+Route::get('/home', 'UserController@index');
+
+Route::get('/staff', 'StaffController@index');
 
 Route::resource('shop', 'ProductController', ['only' => ['index', 'show']]);
 
