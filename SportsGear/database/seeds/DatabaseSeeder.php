@@ -62,6 +62,44 @@ class DatabaseSeeder extends Seeder
                 'img'=>'TitleistProV1',
                 'cost'=>'5',
             ]);
+            DB::table('products')->insert
+            ([
+                'product_name'=>'Wilson Staff 100 Iron',
+                'slug'=> 'wilson-staff-100-iron',
+                'category'=>'Golf',
+                'quantity'=>'100',
+                'img'=>'WilsonStaff100Iron',
+                'cost'=>'200',
+            ]);
+            DB::table('products')->insert
+            ([
+                'product_name'=>'Cobra King F6+ Driver',
+                'slug'=> 'cobra-king-f6-driver',
+                'category'=>'Golf',
+                'quantity'=>'100',
+                'img'=>'CobraKingF6',
+                'cost'=>'220',
+            ]);
+            DB::table('products')->insert
+            ([
+                'product_name'=>'Callaway Chev Mulligan Golf Shoes',
+                'slug'=> 'callaway-chev-mulligan-golf-shoes',
+                'category'=>'Golf',
+                'quantity'=>'100',
+                'img'=>'CallawayChevMulliganGolfShoes',
+                'cost'=>'35',
+            ]);
+
+            DB::table('products')->insert
+            ([
+                'product_name'=>'Golfers Club Yellow Castle Tees',
+                'slug'=> 'golfers-club-yellow-castle-tees',
+                'category'=>'Golf',
+                'quantity'=>'100',
+                'img'=>'GolfersClubYellowCastleTees',
+                'cost'=>'0.59',
+            ]);
+
              DB::table('products')->insert
             ([
                 'product_name'=>'Bow',
@@ -71,6 +109,44 @@ class DatabaseSeeder extends Seeder
                 'img'=>'Bow',
                 'cost'=>'20.34',
             ]);
+            DB::table('products')->insert
+            ([
+                'product_name'=>'Mac Foam Tipped Arrows 3pk',
+                'slug'=> 'mac-foam-tipped-arrows',
+                'category'=>'Archery',
+                'quantity'=>'50',
+                'img'=>'MacFoamTippedArrows',
+                'cost'=>'15',
+            ]);
+            DB::table('products')->insert
+            ([
+                'product_name'=>'Mybo Q5 Target Quiver',
+                'slug'=> 'mybo-q5-target-quiver',
+                'category'=>'Archery',
+                'quantity'=>'50',
+                'img'=>'MyboQ5TargetQuiver',
+                'cost'=>'7.50',
+            ]);
+            DB::table('products')->insert
+            ([
+                'product_name'=>'Kinetic Fury Recurve Riser',
+                'slug'=> 'kinetic-fury-recurve-riser',
+                'category'=>'Archery',
+                'quantity'=>'50',
+                'img'=>'KineticFuryRecurveRiser',
+                'cost'=>'263.33',
+            ]);
+
+            DB::table('products')->insert
+            ([
+                'product_name'=>'Mybo Victory Plus Release Aid',
+                'slug'=> 'mybo-victory-plus-release-aid',
+                'category'=>'Archery',
+                'quantity'=>'50',
+                'img'=>'MyboReleaseAid',
+                'cost'=>'150',
+            ]);
+
              DB::table('products')->insert
             ([
                 'product_name'=>'Baseball Bat',
@@ -89,15 +165,85 @@ class DatabaseSeeder extends Seeder
                 'img'=>'BaseBallBall',
                 'cost'=>'5.94',
             ]);
+
             DB::table('products')->insert
             ([
-                'product_name'=>'Basketall',
+                'product_name'=>'Batting Helmet',
+                'slug'=> 'batting-helmet',
+                'category'=>'Baseball',
+                'quantity'=>'50',
+                'img'=>'BattingHelmet',
+                'cost'=>'49.95',
+            ]);
+
+            DB::table('products')->insert
+            ([
+                'product_name'=>'Turf Trainers',
+                'slug'=> 'turf-trainers',
+                'category'=>'Baseball',
+                'quantity'=>'50',
+                'img'=>'TurfTrainers',
+                'cost'=>'69.95',
+            ]);
+
+            DB::table('products')->insert
+            ([
+                'product_name'=>'Catchers Set',
+                'slug'=> 'catchers-set',
+                'category'=>'Baseball',
+                'quantity'=>'50',
+                'img'=>'CatchersSet',
+                'cost'=>'5.94',
+            ]);
+
+            DB::table('products')->insert
+            ([
+                'product_name'=>'Basketball',
                 'slug'=> 'basketball-ball',
                 'category'=>'Basketball',
                 'quantity'=>'50',
                 'img'=>'BasketBallBall',
                 'cost'=>'11.99',
             ]);
+            DB::table('products')->insert
+            ([
+                'product_name'=>'Knee-Sleeve',
+                'slug'=> 'knee-sleeve',
+                'category'=>'Basketball',
+                'quantity'=>'50',
+                'img'=>'KneeSleeve',
+                'cost'=>'13.99',
+            ]);
+            DB::table('products')->insert
+            ([
+                'product_name'=>'Thigh Sleeve',
+                'slug'=> 'thigh-sleeve',
+                'category'=>'Basketball',
+                'quantity'=>'50',
+                'img'=>'ThighSleeve',
+                'cost'=>'20',
+            ]);
+
+            DB::table('products')->insert
+            ([
+                'product_name'=>'Headbands',
+                'slug'=> 'Headbands',
+                'category'=>'Basketball',
+                'quantity'=>'50',
+                'img'=>'headbands',
+                'cost'=>'14',
+            ]);
+
+            DB::table('products')->insert
+            ([
+                'product_name'=>'Basketball Black',
+                'slug'=> 'basketball-black',
+                'category'=>'Basketball',
+                'quantity'=>'50',
+                'img'=>'BasketballBlack',
+                'cost'=>'20',
+            ]);
+
             DB::table('products')->insert
             ([
                 'product_name'=>'Cricket Ball 6pk',
@@ -188,6 +334,26 @@ class DatabaseSeeder extends Seeder
                 'img'=>'FootballSize5',
                 'cost'=>'13.14',
             ]);
+
+            DB::table('products')->insert
+            ([
+                'product_name'=>'Blue Gloves',
+                'slug'=> 'blue-gloves',
+                'category'=>'Football',
+                'quantity'=>'50',
+                'img'=>'BlueGloves',
+                'cost'=>'90',
+            ]);
+
+            DB::table('products')->insert
+            ([
+                'product_name'=>'Kit Bag',
+                'slug'=> 'kit-bag',
+                'category'=>'Football',
+                'quantity'=>'50',
+                'img'=>'KitBag',
+                'cost'=>'28',
+            ]);
             DB::table('products')->insert
             ([
                 'product_name'=>'Hockey Stick',
@@ -260,6 +426,26 @@ class DatabaseSeeder extends Seeder
                 'img'=>'NetballSize5Ball',
                 'cost'=>'10.74',
             ]);
+
+            DB::table('products')->insert
+            ([
+                'product_name'=>'Blue Post',
+                'slug'=> 'blue-post',
+                'category'=>'Netball',
+                'quantity'=>'50',
+                'img'=>'BluePost',
+                'cost'=>'10.74',
+            ]);
+
+            DB::table('products')->insert
+            ([
+                'product_name'=>'Thunder Netball',
+                'slug'=> 'thunder-netball',
+                'category'=>'Netball',
+                'quantity'=>'50',
+                'img'=>'ThunderNetball',
+                'cost'=>'10.74',
+            ]);
             DB::table('products')->insert
             ([
                 'product_name'=>'Badminton Net',
@@ -296,6 +482,16 @@ class DatabaseSeeder extends Seeder
                 'img'=>'BadmintonRacquet',
                 'cost'=>'18.55',
             ]);
+
+            DB::table('products')->insert
+            ([
+                'product_name'=>'Badminton Shoes',
+                'slug'=> 'badminton-shoes',
+                'category'=>'Badminton',
+                'quantity'=>'50',
+                'img'=>'BadmintonShoes',
+                'cost'=>'30',
+            ]);
             DB::table('products')->insert
             ([
                 'product_name'=>'Tennis Ball 6pk',
@@ -314,24 +510,7 @@ class DatabaseSeeder extends Seeder
                 'img'=>'TennisNet',
                 'cost'=>'154.80',
             ]);
-            DB::table('products')->insert
-            ([
-                'product_name'=>'Beam Mat',
-                'slug'=> 'gymnastics-beam-mat',
-                'category'=>'Gymnastics',
-                'quantity'=>'50',
-                'img'=>'GymBeamMat',
-                'cost'=>'239.94',
-            ]);
-            DB::table('products')->insert
-            ([
-                'product_name'=>'Squash Balls',
-                'slug'=> 'squash-balls',
-                'category'=>'Squash',
-                'quantity'=>'50',
-                'img'=>'TennisBall6pk',
-                'cost'=>'27.60',
-            ]);
+
             DB::table('products')->insert
             ([
                 'product_name'=>'Tennis Racquet',
@@ -341,15 +520,27 @@ class DatabaseSeeder extends Seeder
                 'img'=>'TennisRacquet',
                 'cost'=>'16.64',
             ]);
+
             DB::table('products')->insert
             ([
-                'product_name'=>'Squash Racquet',
-                'slug'=> 'squash-racquet',
-                'category'=>'Squash',
+                'product_name'=>'Tennis Shoes',
+                'slug'=> 'tennis-shoes',
+                'category'=>'Tennis',
                 'quantity'=>'50',
-                'img'=>'SquashRacquet',
-                'cost'=>'12.78',
+                'img'=>'TennisShoes',
+                'cost'=>'70.95',
             ]);
+
+            DB::table('products')->insert
+            ([
+                'product_name'=>'Tennis Bag',
+                'slug'=> 'tennis-bag',
+                'category'=>'Tennis',
+                'quantity'=>'50',
+                'img'=>'TennisBag',
+                'cost'=>'45.95',
+            ]);
+            
             DB::table('products')->insert
             ([
                 'product_name'=>'Table Tennis Bat',
@@ -386,6 +577,16 @@ class DatabaseSeeder extends Seeder
                 'img'=>'TableTennisTable',
                 'cost'=>'239.94',
             ]);
+
+            DB::table('products')->insert
+            ([
+                'product_name'=>'Table Tennis Shoes',
+                'slug'=> 'table-tennis-shoes',
+                'category'=>'Table Tennis',
+                'quantity'=>'50',
+                'img'=>'TableTennisShoes',
+                'cost'=>'69.99',
+            ]);
             DB::table('products')->insert
             ([
                 'product_name'=>'VolleyBall Ball',
@@ -407,12 +608,33 @@ class DatabaseSeeder extends Seeder
             DB::table('products')->insert
             ([
                 'product_name'=>'VolleyBall Post',
-                'slug'=> 'basketball-post',
+                'slug'=> 'volleyball-post',
                 'category'=>'VolleyBall',
                 'quantity'=>'50',
                 'img'=>'VolleyBallPosts',
                 'cost'=>'582.89',
             ]);
+
+            DB::table('products')->insert
+            ([
+                'product_name'=>'Vollyball Knee Pads',
+                'slug'=> 'vollyball-knee-pads',
+                'category'=>'VolleyBall',
+                'quantity'=>'50',
+                'img'=>'VollyballKneePads',
+                'cost'=>'2.89',
+            ]);
+
+            DB::table('products')->insert
+            ([
+                'product_name'=>'Volleyball Shoes',
+                'slug'=> 'volleyball-shoes',
+                'category'=>'VolleyBall',
+                'quantity'=>'50',
+                'img'=>'VolleyballShoes',
+                'cost'=>'50.89',
+            ]);
+
             DB::table('products')->insert
             ([
                 'product_name'=>'Hurling Stick',
@@ -440,23 +662,25 @@ class DatabaseSeeder extends Seeder
                 'img'=>'HurlingHelmet',
                 'cost'=>'71.94',
             ]);
+
             DB::table('products')->insert
             ([
-                'product_name'=>'Gaelic Football',
-                'slug'=> 'gaelic-football',
-                'category'=>'Gaelic',
+                'product_name'=>'Hurling Grip',
+                'slug'=> 'hurling-gript',
+                'category'=>'Hurling',
                 'quantity'=>'50',
-                'img'=>'GaelicFootball',
-                'cost'=>'8.34',
+                'img'=>'HurlingGrip',
+                'cost'=>'3',
             ]);
+
             DB::table('products')->insert
             ([
-                'product_name'=>'Judo Mat',
-                'slug'=> 'judo-mat',
-                'category'=>'Judo',
+                'product_name'=>'Helmet Liner',
+                'slug'=> 'helmet-liner',
+                'category'=>'Hurling',
                 'quantity'=>'50',
-                'img'=>'JudoMat',
-                'cost'=>'41.94',
+                'img'=>'HelmetLiner',
+                'cost'=>'12',
             ]);
             DB::table('products')->insert
             ([
@@ -502,15 +726,6 @@ class DatabaseSeeder extends Seeder
                 'quantity'=>'50',
                 'img'=>'BoxingSpeedBall',
                 'cost'=>'22.74',
-            ]);
-            DB::table('products')->insert
-            ([
-                'product_name'=>'American Football',
-                'slug'=> 'american-football',
-                'category'=>'American Football',
-                'quantity'=>'50',
-                'img'=>'AmericanFootballBall',
-                'cost'=>'19.14',
             ]);
     }
 }
