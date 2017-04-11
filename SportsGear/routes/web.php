@@ -21,11 +21,6 @@ Route::get('/products', 'PagesController@products');
 
 
 
-/**
-* Needed?
-*/
-//Route::get('/product', 'PagesController@product');
-
 Route::get('/cart', 'PagesController@cart');
 
 Route::get('/wishlist', 'PagesController@wishlist');
@@ -38,6 +33,12 @@ Route::get('/home', 'HomeController@index');
 
 Route::resource('shop', 'ProductController', ['only' => ['index', 'show']]);
 
-Route::resource('shop', 'CartController', ['only' => ['index', 'store', 'update', 'destroy']]);
+Route::resource('cart', 'CartController');
+Route::delete('emptyCart', 'CartController@emptyCart');
+Route::post('switchToWishlist/{id}', 'CartController@switchToWishlist');
+
+Route::resource('wishlist', 'WishlistController');
+Route::delete('emptyWishlist', 'WishlistController@emptyWishlist');
+Route::post('switchToCart/{id}', 'WishlistController@switchToCart');
 
 
