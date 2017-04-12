@@ -15,6 +15,9 @@ Route::get('/', 'GuestController@home');
 
 Route::get('/products', 'GuestController@products');
 
+Route::get('/categories','GuestController@categories');
+
+
 
 Route::get('/cart', 'CartController@cart');
 
