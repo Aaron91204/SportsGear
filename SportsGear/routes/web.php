@@ -32,7 +32,7 @@ Route::prefix('/staff')->group(function(){
 
 	Route::get('/login', 'Auth\StaffLoginController@showLoginForm')->name('staff.login');
 	
-	Route::post('/login', 'Auth\StaffLoginController@showLoginForm')->name('staff.login.submit');
+	Route::post('/login', 'Auth\StaffLoginController@Login')->name('staff.login.submit');
 });
 
 
