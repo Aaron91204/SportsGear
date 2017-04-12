@@ -18,7 +18,7 @@ class DatabaseSeeder extends Seeder
         		'surname'=>'Ford',
         		'email'=>'GFord@ymail.com',
                 'username'=>'GUnit',
-        		'password'=>'Pass',
+        		'password'=>bcrypt('Pass'),
         	]);
             DB::table('staff')->insert
             ([
@@ -26,7 +26,7 @@ class DatabaseSeeder extends Seeder
                 'surname'=>'Dinsmore',
                 'email'=>'RDinz@ymail.com',
                 'username'=>'Dinz77',
-                'password'=>'Pikachu',
+                'password'=>bcrypt('Pikachu'),
             ]);
             DB::table('staff')->insert
             ([
@@ -34,7 +34,7 @@ class DatabaseSeeder extends Seeder
                 'surname'=>'Comins',
                 'email'=>'RComins@ymail.com',
                 'username'=>'Comins66',
-                'password'=>'Dominoes',
+                'password'=>bcrypt('Dominoes'),
             ]);
             DB::table('staff')->insert
             ([
@@ -42,7 +42,7 @@ class DatabaseSeeder extends Seeder
                 'surname'=>'Morrison',
                 'email'=>'NMorrison@ymail.com',
                 'username'=>'Morrison12',
-                'password'=>'Hearts',
+                'password'=>bcrypt('Hearts'),
             ]);
             DB::table('staff')->insert
             ([
@@ -50,7 +50,7 @@ class DatabaseSeeder extends Seeder
                 'surname'=>'Weatherspoon',
                 'email'=>'IWeatherspoon@ymail.com',
                 'username'=>'Spooner',
-                'password'=>'Golf',
+                'password'=>bcrypt('Golf'),
             ]);
             
             DB::table('products')->insert
