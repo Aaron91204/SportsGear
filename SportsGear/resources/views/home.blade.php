@@ -33,7 +33,7 @@
                         <br>
 
                         <div class="form-group{{ $errors->has('surname') ? ' has-error' : '' }}">
-                            <label for="surname" class="col-md-4 control-label">Surname</label>
+                            <label for="surname" class="col-md-4 control-label">Email</label>
 
                             <div class="col-md-6">
                                 <input id="surname" type="text" class="form-control" name="surname" value="{{ old('surname') }}" required autofocus>
