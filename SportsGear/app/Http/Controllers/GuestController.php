@@ -21,6 +21,10 @@ class GuestController extends Controller
         return view('welcome')->with('products', $products);
 
     }
+    public function categories(){
+    	$products=Product::select('category')->distinct()->orderBy('category')->get();
+    	return view('categories')->with('products',$products);
+    }
 
     
 }
