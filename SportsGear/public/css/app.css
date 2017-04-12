@@ -1437,8 +1437,9 @@
  .thumbnail a>img,
  .carousel-inner>.item>img,
  .carousel-inner>.item>a>img{
-    height: 100px;
-    width: 100px;
+    height: auto;
+    width: 150px;
+    border-radius: 5px;
  }
  .img-rounded {
      border-radius: 0
