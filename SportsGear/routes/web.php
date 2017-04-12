@@ -16,9 +16,9 @@ Route::get('/', 'GuestController@home');
 Route::get('/products', 'GuestController@products');
 
 
-Route::get('/cart', 'GuestController@cart');
+Route::get('/cart', 'CartController@cart');
 
-Route::get('/wishlist', 'PagesController@wishlist');
+Route::get('/wishlist', 'WishlistController@wishlist');
 
 Route::get('/confirmation', 'UserController@confirmation');
 

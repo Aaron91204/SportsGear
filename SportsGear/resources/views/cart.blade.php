@@ -37,7 +37,8 @@
                 <tbody>
                     @foreach (Cart::content() as $item)
                     <tr>
-                        <td class="table-image"><a href="{{ url('shop', [$item->model->slug]) }}"><img src="{{ asset('img/' . $item->model->image) }}" alt="product" class="img-responsive cart-image"></a></td>
+                        <td class="table-image"><a href="{{ url('shop', [$item->model->slug]) }}"><img src="{{ asset('images/' . $item->model->img . '.jpg') }}" alt="product" class="img-responsive cart-image"
+                        style="height:100px;width:150px;"></a></td>
                         <td><a href="{{ url('shop', [$item->model->slug]) }}">{{ $item->name }}</a></td>
                         <td>
                             <select class="quantity" data-id="{{ $item->rowId }}">
@@ -48,7 +49,7 @@
                                 <option {{ $item->qty == 5 ? 'selected' : '' }}>5</option>
                             </select>
                         </td>
-                        <td>${{ $item->subtotal }}</td>
+                        <td>£{{ $item->subtotal }}</td>
                         <td class=""></td>
                         <td>
                             <form action="{{ url('cart', [$item->rowId]) }}" method="POST" class="side-by-side">
@@ -69,7 +70,7 @@
                         <td class="table-image"></td>
                         <td></td>
                         <td class="small-caps table-bg" style="text-align: right">Subtotal</td>
-                        <td>${{ Cart::instance('default')->subtotal() }}</td>
+                        <td>£{{ Cart::instance('default')->subtotal() }}</td>
                         <td></td>
                         <td></td>
                     </tr>
@@ -77,7 +78,7 @@
                         <td class="table-image"></td>
                         <td></td>
                         <td class="small-caps table-bg" style="text-align: right">Tax</td>
-                        <td>${{ Cart::instance('default')->tax() }}</td>
+                        <td>£{{ Cart::instance('default')->tax() }}</td>
                         <td></td>
                         <td></td>
                     </tr>
@@ -86,7 +87,7 @@
                         <td class="table-image"></td>
                         <td style="padding: 40px;"></td>
                         <td class="small-caps table-bg" style="text-align: right">Your Total</td>
-                        <td class="table-bg">${{ Cart::total() }}</td>
+                        <td class="table-bg">£{{ Cart::total() }}</td>
                         <td class="column-spacer"></td>
                         <td></td>
                     </tr>

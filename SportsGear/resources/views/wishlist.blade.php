@@ -25,7 +25,7 @@
             <table class="table">
                 <thead>
                     <tr>
-                        <th class="table-image"></th>
+                        <th class="table-image" ></th>
                         <th>Product</th>
 
                         <th>Price</th>
@@ -37,10 +37,11 @@
                 <tbody>
                     @foreach (Cart::instance('wishlist')->content() as $item)
                     <tr>
-                        <td class="table-image"><a href="{{ url('shop', [$item->model->product_name]) }}"><img src="{{ asset('image/' . $item->model->img . '.jpg') }}" alt="product" class="img-responsive cart-image"></a></td>
-                        <td><a href="{{ url('shop', [$item->model->product_name]) }}">{{ $item->name }}</a></td>
+                        <td class="table-image"><a href="{{ url('shop', [$item->model->slug]) }}"><img src="{{ asset('images/' . $item->model->img) . '.jpg' }}" alt="product" class="img-responsive cart-image" 
+                        style="height:100px;width:150px;"></a></td>
+                        <td><a href="{{ url('shop', [$item->model->slug]) }}">{{ $item->name }}</a></td>
 
-                        <td>${{ $item->subtotal }}</td>
+                        <td>£{{ $item->subtotal }}</td>
                         <td class=""></td>
                         <td>
                             <form action="{{ url('wishlist', [$item->rowId]) }}" method="POST" class="side-by-side">

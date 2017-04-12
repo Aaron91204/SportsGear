@@ -22,23 +22,5 @@ class GuestController extends Controller
 
     }
 
-    /**
-     * View your cart contents.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function cart(){
-    	return view('cart');
-    }
-
-    /**
-     * View your wishlist contents.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function wishlist(){
-        return view('wishlist');
-    }
-
     
 }
