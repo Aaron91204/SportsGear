@@ -13,12 +13,12 @@ class CreateContactusTable extends Migration
      */
     public function up()
     {
-        Schema::create('contactus', function (Blueprint $table) 
-        {
-        $table->increments('id')->index();
-        $table->string('name');
-        $table->string('email');
-        $table->string('question');
+        Schema::create('contactus', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('firstname');
+            $table->string('email');
+            $table->string('question');
+            $table->timestamps();
         });
     }
 
@@ -30,6 +30,5 @@ class CreateContactusTable extends Migration
     public function down()
     {
         Schema::dropIfExists('contactus');
-
     }
 }

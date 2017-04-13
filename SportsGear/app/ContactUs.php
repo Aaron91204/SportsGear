@@ -4,10 +4,11 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Contact extends Model
+class ContactUs extends Model
 {
+	public $table = "contactus";
     //Assignable attributes
-    protected $fillable= array('name','email', 'question');
+    protected $fillable= array('firstname','email', 'question');
 
     //Relationships
     public function customer(){

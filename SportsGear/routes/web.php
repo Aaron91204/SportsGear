@@ -13,8 +13,6 @@
 
 Route::get('/', 'GuestController@home');
 
-Route::get('/products', 'GuestController@products');
-
 Route::get('/categories','GuestController@categories');
 
 
@@ -29,6 +27,8 @@ Auth::routes();
 
 Route::get('/home', 'UserController@index');
 
+Route::post('/submit', 'UserController@submitQuery');
+
 Route::prefix('/staff')->group(function(){
 
 	Route::get('/', 'StaffController@index')->name('staff.dashboard');
@@ -38,6 +38,7 @@ Route::prefix('/staff')->group(function(){
 	Route::post('/login', 'Auth\StaffLoginController@Login')->name('staff.login.submit');
 });
 
+//Route::get('', 'ProductController', ['only' => ['index', 'show']]);
 
 Route::resource('shop', 'ProductController', ['only' => ['index', 'show']]);
 
