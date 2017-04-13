@@ -25,9 +25,11 @@
             <div class="row">
                 @foreach ($items as $product)
                     <div class="col-md-3">
-                        <div class="thumbnail">
-                            <div class="caption text-center">
-                                <h3><a href="/">{{ $product->category}}</a></h3>
+                        <div class="thumbnail text-center" style="position:relative;">
+                            <img src="{{ asset('images/' . $product->category . '.jpg') }}" alt="product" class="img-responsive">
+                            <div class="caption " style="position:absolute;top: 45%;left: 0;width: 100%;"">
+                                
+                                <h3><a href="{{ url('shop/categories', [$product->category]) }}" style="color:white;text-shadow: 2px 2px 4px #000000;">{{ $product->category}}</a></h3>
                                 
                             </div> <!-- end caption -->
                         </div> <!-- end thumbnail -->

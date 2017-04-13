@@ -53,7 +53,7 @@
                                 <label for="firstname" class="col-md-4 control-label">Please enter your question</label>
 
                                 <div class="col-md-6">
-                                    <textarea name="question" cols="50" rows="10"></textarea>
+                                    <textarea name="question" cols="50" rows="10" required autofocus></textarea>
 
                                 </div>
                             </div>
