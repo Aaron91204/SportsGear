@@ -52,24 +52,6 @@ class UserController extends Controller
         $email = $request->input('email');
         $question = $request->input('question');
 
-        /*$data = [
-            'firstaname'=>$firstname,
-            'email' => $email, 
-            'question' => $question
-            ];
-
-
-        $validator = Validator::make($data, [
-                        'firstname' => 'required',
-                        'email' => 'required|min:8',
-                        'question' => 'required'
-                    ]);
-*/
-        /*if ($validator->fails())
-        {
-          return redirect('fail')->withSuccessMessage('Fill out all fields');
-        }*/
-
         $contact = new ContactUs;
 
         $contact->firstname = $firstname;

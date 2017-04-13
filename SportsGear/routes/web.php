@@ -13,7 +13,14 @@
 
 Route::get('/', 'GuestController@home');
 
-Route::get('/categories','GuestController@categories');
+
+Route::prefix('/shop')->group(function(){
+
+	Route::get('/categories','GuestController@categories');
+
+	Route::get('categories/{category}', 'ProductController@category');
+
+});
 
 
 
@@ -25,7 +32,7 @@ Route::get('/confirmation', 'UserController@confirmation');
 
 Auth::routes();
 
-Route::get('/home', 'UserController@index');
+Route::get('/home', 'UserController@index')->name('home');
 
 Route::post('/submit', 'UserController@submitQuery');
 
@@ -38,9 +45,9 @@ Route::prefix('/staff')->group(function(){
 	Route::post('/login', 'Auth\StaffLoginController@Login')->name('staff.login.submit');
 });
 
-//Route::get('', 'ProductController', ['only' => ['index', 'show']]);
-
 Route::resource('shop', 'ProductController', ['only' => ['index', 'show']]);
+
+//
 
 Route::resource('cart', 'CartController');
 Route::delete('emptyCart', 'CartController@emptyCart');

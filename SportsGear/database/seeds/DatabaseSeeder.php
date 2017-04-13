@@ -545,7 +545,7 @@ class DatabaseSeeder extends Seeder
             ([
                 'product_name'=>'Table Tennis Bat',
                 'slug'=> 'table-tennis-bat',
-                'category'=>'Table Tennis',
+                'category'=>'Table-Tennis',
                 'quantity'=>'50',
                 'img'=>'TableTennisBat',
                 'cost'=>'5.94',
@@ -554,7 +554,7 @@ class DatabaseSeeder extends Seeder
             ([
                 'product_name'=>'Table Tennis Net',
                 'slug'=> 'table-tennis-net',
-                'category'=>'Table Tennis',
+                'category'=>'Table-Tennis',
                 'quantity'=>'50',
                 'img'=>'TableTennisNet',
                 'cost'=>'9.54',
@@ -563,7 +563,7 @@ class DatabaseSeeder extends Seeder
             ([
                 'product_name'=>'Table Tennis Ball 6pk',
                 'slug'=> 'table-tennis-ball6pk',
-                'category'=>'Table Tennis',
+                'category'=>'Table-Tennis',
                 'quantity'=>'50',
                 'img'=>'TableTennisBall6pk',
                 'cost'=>'3',
@@ -572,7 +572,7 @@ class DatabaseSeeder extends Seeder
             ([
                 'product_name'=>'Table Tennis Table',
                 'slug'=> 'table-tennis-table',
-                'category'=>'Table Tennis',
+                'category'=>'Table-Tennis',
                 'quantity'=>'50',
                 'img'=>'TableTennisTable',
                 'cost'=>'239.94',
@@ -582,7 +582,7 @@ class DatabaseSeeder extends Seeder
             ([
                 'product_name'=>'Table Tennis Shoes',
                 'slug'=> 'table-tennis-shoes',
-                'category'=>'Table Tennis',
+                'category'=>'Table-Tennis',
                 'quantity'=>'50',
                 'img'=>'TableTennisShoes',
                 'cost'=>'69.99',

@@ -35,4 +35,15 @@ class ProductController extends Controller
 
         return view('product')->with(['product' => $product, 'interested' => $interested]);
     }
+
+    /**
+     * Display the specified category view.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function category(Request $request)
+    {   
+        $products = Product::where('category', '=', $request->category)->get();
+        return view('category')->with('products', $products);
+    }
 }
