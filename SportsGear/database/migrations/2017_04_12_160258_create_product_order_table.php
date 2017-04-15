@@ -13,10 +13,13 @@ class CreateProductOrderTable extends Migration
      */
     public function up()
     {
-         Schema::create('product_order', function (Blueprint $table) 
+        Schema::create('product_order', function (Blueprint $table) 
         {
-        $table->increments('id')->index();
-        $table->integer('product_id');
+            $table->increments('id')->index();
+            $table->integer('product_id');
+            $table->integer('quantity');
+
+            $table->unique(['id', 'product_id'], 'composite_index');
         });
     }
 

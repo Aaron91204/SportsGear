@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class ProductOrder extends Model
 {
     //Assignable attributes
-    protected $fillable= array('product_Id','order_Id');
+    protected $fillable= array('product_Id','quantity');
 
     //Relationships
     public function order(){

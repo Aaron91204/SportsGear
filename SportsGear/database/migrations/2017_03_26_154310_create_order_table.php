@@ -17,7 +17,6 @@ class CreateOrderTable extends Migration
         $table->increments('id')->index();
         $table->integer('product_order_id');
         $table->integer('customer_id');
-        $table->integer('quantity');
         $table->integer('total');
         });
     }
