@@ -6,6 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Order extends Model
 {
+	protected $table = 'order';
+	public $timestamps = false;
+
     //Assignable attributes
     protected $fillable= array('customer_Id','totalCost');
 

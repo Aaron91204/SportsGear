@@ -5,8 +5,12 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
+use App\Order;
+use App\ProductOrder;
 use \Cart as Cart;
+use Auth;
 use Validator;
+use DB;
 
 class CartController extends Controller
 {
@@ -114,6 +118,44 @@ class CartController extends Controller
                                   ->associate('App\Product');
 
         return redirect('cart')->withSuccessMessage('Item has been moved to your Wishlist!');
+
+    }
+
+    /**
+     * Adds purchase info to database and empties cart.
+     *
+     * 
+     * @return \Illuminate\Http\Response
+     */
+    public function purchaseItems()
+    {
+        $products = Cart::content();
+
+        $user = Auth::user();
+
+        $order = new Order();
+
+        $order->customer_id = $user->id;
+        $order->totalCost = Cart::total();
+        $order->save();
+
+        foreach($products as $product)
+        {
+            $productOrder = new ProductOrder;
+            $productOrder->order_id = $order->id;
+            $productOrder->product_id = $product->id;
+            $productOrder->quantity = $product->qty;
+
+            
+            DB::table('products')
+            ->where('id', $product->id )
+            ->decrement('quantity', $product->qty);
+
+            $productOrder ->save();
+        }
+
+        Cart::destroy();
+        return redirect('home')->withSuccessMessage('Purchase successul!');
 
     }
 }

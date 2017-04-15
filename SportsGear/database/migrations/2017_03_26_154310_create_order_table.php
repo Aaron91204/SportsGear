@@ -6,6 +6,8 @@ use Illuminate\Database\Migrations\Migration;
 
 class CreateOrderTable extends Migration
 {
+
+
     /**
      * Run the migrations.
      *
@@ -16,7 +18,7 @@ class CreateOrderTable extends Migration
         Schema::create('order', function (Blueprint $table) {
         $table->increments('id')->index();
         $table->integer('customer_id');
-        $table->integer('total');
+        $table->integer('totalCost');
         });
     }
 

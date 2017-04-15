@@ -13,6 +13,8 @@
 
 Route::get('/', 'GuestController@home');
 
+Route::post('/', 'CartController@purchaseItems');
+
 
 Route::prefix('/shop')->group(function(){
 

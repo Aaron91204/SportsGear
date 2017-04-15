@@ -6,6 +6,8 @@ use Illuminate\Database\Migrations\Migration;
 
 class CreateProductOrderTable extends Migration
 {
+
+   
     /**
      * Run the migrations.
      *
