@@ -11,7 +11,7 @@ class ProductOrder extends Model
 
     //Relationships
     public function order(){
-    	return $this->belongsTo('App\Order','foreign_key');
+    	return $this->hasOne('App\Order','foreign_key');
 
     }
 
