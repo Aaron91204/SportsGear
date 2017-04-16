@@ -27,7 +27,6 @@
                     <tr>
                         <th class="table-image"></th>
                         <th>Product</th>
-                        <th>Quantity</th>
                         <th>Price</th>
                         <th class="column-spacer"></th>
                         <th></th>
@@ -40,15 +39,6 @@
                         <td class="table-image"><a href="{{ url('shop', [$item->model->slug]) }}"><img src="{{ asset('images/' . $item->model->img . '.jpg') }}" alt="product" class="img-responsive cart-image"
                         style="height:100px;width:150px;"></a></td>
                         <td><a href="{{ url('shop', [$item->model->slug]) }}">{{ $item->name }}</a></td>
-                        <td>
-                            <select class="quantity" data-id="{{ $item->rowId }}">
-                                <option {{ $item->qty == 1 ? 'selected' : '' }}>1</option>
-                                <option {{ $item->qty == 2 ? 'selected' : '' }}>2</option>
-                                <option {{ $item->qty == 3 ? 'selected' : '' }}>3</option>
-                                <option {{ $item->qty == 4 ? 'selected' : '' }}>4</option>
-                                <option {{ $item->qty == 5 ? 'selected' : '' }}>5</option>
-                            </select>
-                        </td>
                         <td>£{{ $item->subtotal }}</td>
                         <td class=""></td>
                         <td>
@@ -96,8 +86,13 @@
             </table>
 
             <a href="{{ url('/shop') }}" class="btn btn-primary btn-lg">Continue Shopping</a> &nbsp;
-            <a href="#" class="btn btn-success btn-lg">Proceed to Checkout</a>
+           
+            <form action="{{ url('/') }}" method="POST">
+                {!! csrf_field() !!}
 
+                <input type="submit" class="btn btn-success btn-lg" value="Proceed to Checkout">
+
+            </form>
             <div style="float:right">
                 <form action="{{ url('/emptyCart') }}" method="POST">
                     {!! csrf_field() !!}

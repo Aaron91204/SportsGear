@@ -6,6 +6,8 @@ use Illuminate\Database\Migrations\Migration;
 
 class CreateProductOrderTable extends Migration
 {
+
+   
     /**
      * Run the migrations.
      *
@@ -13,10 +15,14 @@ class CreateProductOrderTable extends Migration
      */
     public function up()
     {
-         Schema::create('product_order', function (Blueprint $table) 
+        Schema::create('product_order', function (Blueprint $table) 
         {
-        $table->increments('id')->index();
-        $table->integer('product_id');
+            $table->increments('id')->index();
+            $table->integer('order_id');
+            $table->integer('product_id');
+            $table->integer('quantity');
+
+            $table->unique(['id', 'order_id'], 'composite_index');
         });
     }
 

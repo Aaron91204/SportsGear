@@ -6,8 +6,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Order extends Model
 {
+	protected $table = 'order';
+	public $timestamps = false;
+
     //Assignable attributes
-    protected $fillable= array('product_Id','quantity','category', 'customer_Id', 'totalCost');
+    protected $fillable= array('customer_Id','totalCost');
 
     //Relationships
     public function customer(){
