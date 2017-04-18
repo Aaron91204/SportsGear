@@ -13,51 +13,6 @@
                         You are logged in!
                         <br>
                         <br>
-<div class = "container">
-          
-          Account Details
-          <br>
-          Please check that your details are correct
-          <br>
-          <br>
-            <div class="form-group">
-              <label for="firstname" class="col-md-4 control-label">First Name</label> <!--first name label -->
-                <div class="col-md-6">
-                    <input id="firstname" type="text" class="form-control" name="firstname" value="{{Auth::user()->firstname}}">
-                </div>
-            </div>
-            <div class="form-group">
-              <label for="surname" class="col-md-4 control-label">Surname</label>
-                <div class="col-md-6">
-                  <input id="email" type="text" class="form-control" name="email" value="{{Auth::user()->surname}}" >
-                </div>
-            </div>
-             <div class="form-group">
-              <label for="address" class="col-md-4 control-label">Address</label>
-                <div class="col-md-6">
-                  <input id="email" type="text" class="form-control" name="address" value="{{Auth::user()->address}}">
-                </div>
-            </div>
-            <div class="form-group">
-              <label for="postcode" class="col-md-4 control-label">Postcode</label>
-                <div class="col-md-6">
-                  <input id="postcode" type="text" class="form-control" name="postcode" value="{{Auth::user()->postcode}}">
-                </div>
-            </div>
-              <div class="form-group">
-              <label for="email" class="col-md-4 control-label">Email</label>
-                <div class="col-md-6">
-                  <input id="email" type="text" class="form-control" name="email" value="{{Auth::user()->email}}">
-                </div>
-            </div>
-              <div class="form-group">
-              <label for="telephone" class="col-md-4 control-label">Telephone</label>
-                <div class="col-md-6">
-                  <input id="telephone" type="text" class="form-control" name="telephone" value="{{Auth::user()->telephone}}">
-                </div>
-            </div>
-            </div>
-               
                         <br>
                         Contact Us Form
                         <br>
@@ -111,7 +66,6 @@
                                     <input type="submit" class="btn btn-primary" value="Submit">
                                 </div>
                             </div>
-
                     </div>
                 </form>
             </div>
