@@ -35,11 +35,23 @@ class UserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function accountdetails()
+    {
+
+        return view('accountdetails');
+    }
+  
+    /**
+     * Should only be available to logged in users.
+     *
+     * @return \Illuminate\Http\Response
+     */
     public function confirmation()
     {
 
         return view('confirmation');
     }
+  
 
     /**
      * Send a contact form to a staff member
@@ -63,4 +75,20 @@ class UserController extends Controller
         return redirect('home')->withSuccessMessage('Query successfully submitted');
 
     }
+
+    public function update(Request $request){
+    
+        $firstname = $request->input('firstname');
+        $surname = $request->input('surname');
+        $address = $request->input('address');
+        $postcode = $request->input('postcode');
+        $telephone = $request->input('telephone');
+
+        $user->save();
+        $App->flash('global','Your details have been updated');
+        $App->response->redirect('home');
+
+
+    }
+
 }
