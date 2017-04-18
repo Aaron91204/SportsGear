@@ -31,6 +31,8 @@ Route::get('/cart', 'CartController@cart');
 Route::get('/wishlist', 'WishlistController@wishlist');
 
 Route::get('/confirmation', 'UserController@confirmation');
+Route::get('/accountdetails','UserController@accountdetails')->name('accountdetails');
+
 
 Auth::routes();
 
