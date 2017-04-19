@@ -13,6 +13,8 @@ class StaffController extends Controller
      */
     public function __construct()
     {
+
+        //Middleware to ensure only logged in staff can access these pages
         $this->middleware('auth:staff');
     }
 
@@ -24,5 +26,35 @@ class StaffController extends Controller
     public function index()
     {
         return view('staff');
+    }
+
+    /**
+     * Show staff details form.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function accountDetails()
+    {
+        return view('staff-account-details');
+    }
+
+    /**
+     * Show add staff form.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function addStaff()
+    {
+        return view('add-staff');
+    }
+
+    /**
+     * Show update products form.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function updateProducts()
+    {
+        return view('update-products');
     }
 }

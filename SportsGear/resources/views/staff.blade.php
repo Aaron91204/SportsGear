@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.staffArea')
 
 @section('content')
 <div class="container">
@@ -9,7 +9,6 @@
 
                 <div class="panel-body">
                     You are logged in as a Staff member!!
-                    <a href="{{ url('/product') }}">Product</a>
                 </div>
             </div>
         </div>
