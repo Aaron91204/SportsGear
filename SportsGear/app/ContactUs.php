@@ -9,6 +9,7 @@ class ContactUs extends Model
 	public $table = "contactus";
     //Assignable attributes
     protected $fillable= array('firstname','email', 'question');
+);
 
     //Relationships
     public function customer(){
