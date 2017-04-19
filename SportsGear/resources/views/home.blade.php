@@ -13,6 +13,7 @@
                         You are logged in!
                         <br>
                         <br>
+                        <br>
                         Contact Us Form
                         <br>
                         If you have any questons for us please feel free to use the following form to contact us
@@ -65,7 +66,6 @@
                                     <input type="submit" class="btn btn-primary" value="Submit">
                                 </div>
                             </div>
-
                     </div>
                 </form>
             </div>
