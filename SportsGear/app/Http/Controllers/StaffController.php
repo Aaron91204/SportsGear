@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Staff;
+use Auth;
 
 class StaffController extends Controller
 {
@@ -33,8 +35,9 @@ class StaffController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function accountDetails()
+    public function accountDetails(Request $request)
     {
+        
         return view('staff-account-details');
     }
 
@@ -56,5 +59,22 @@ class StaffController extends Controller
     public function updateProducts()
     {
         return view('update-products');
+    }
+
+    /**
+     * Show update products form.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request $request)
+    {
+        $user = Staff::where('id', Auth::user()->id)->firstOrFail();
+    
+        $user->firstname = $request->input('firstname');
+        $user->surname = $request->input('surname');
+        $user->email = $request->input('email');
+
+        $user->save();
+        return view('staff');
     }
 }

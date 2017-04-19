@@ -56,6 +56,8 @@ Route::prefix('/staff')->group(function(){
 	Route::get('/login', 'Auth\StaffLoginController@showLoginForm')->name('staff.login');
 	
 	Route::post('/login', 'Auth\StaffLoginController@Login')->name('staff.login.submit');
+
+	ROute::post('/update', 'StaffController@update');
 });
 
 Route::resource('shop', 'ProductController', ['only' => ['index', 'show']]);

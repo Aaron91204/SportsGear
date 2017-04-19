@@ -10,6 +10,7 @@ class Staff extends Authenticatable
     use Notifiable;
 
     protected $guard = 'staff';
+    public $timestamps = false;
 
     /**
      * The attributes that are mass assignable.
