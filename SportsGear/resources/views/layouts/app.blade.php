@@ -66,13 +66,7 @@
                                             Home
                                         </a>
                                     </li>
-                                    <li>
-                                        <a href="{{ route('logout') }}"
-                                            onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                            Logout
-                                        </a>
-                                        </li>
+
                                     <li>
                                         <a href="{{route('accountdetails')}}">
                                         Account Details
@@ -83,10 +77,20 @@
                                             {{ csrf_field() }}
                                         </form>
                                     </li>
+
+                                    <li>
+                                        <a href="{{ route('logout') }}"
+                                            onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                            Logout
+                                        </a>
+                                    </li>
+                                    
                                     
                                 </ul>
                             </li>
                         @endif
+                            <li> <a href="{{url('/shop/categories')}}">Shop</a></li>
                             <li ><a href="{{ url('/wishlist') }}">Wishlist ({{ Cart::instance('wishlist')->count(false) }})</a></li>
                             <li ><a href="{{ url('/cart') }}">Cart ({{ Cart::instance('default')->count(false) }})</a></li>
                     </ul>
