@@ -155,7 +155,7 @@ class CartController extends Controller
         }
 
         Cart::destroy();
-        return redirect('home')->withSuccessMessage('Purchase successul!');
+        return redirect('/')->withSuccessMessage('Your Order has been Processed');
 
     }
 }
