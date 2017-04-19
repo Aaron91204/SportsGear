@@ -1437,7 +1437,7 @@
  .thumbnail a>img,
  .carousel-inner>.item>img,
  .carousel-inner>.item>a>img{
-    height: auto;
+    height: 150px;
     width: 150px;
     border-radius: 5px;
  }
