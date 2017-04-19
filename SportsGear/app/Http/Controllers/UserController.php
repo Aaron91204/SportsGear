@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\ContactUs;
+use App\User;
+use Auth;
 use Validator;
 
 class UserController extends Controller
@@ -77,16 +79,19 @@ class UserController extends Controller
     }
 
     public function update(Request $request){
+
+        $user = User::where('id', Auth::user()->id)->firstOrFail();
     
-        $firstname = $request->input('firstname');
-        $surname = $request->input('surname');
-        $address = $request->input('address');
-        $postcode = $request->input('postcode');
-        $telephone = $request->input('telephone');
+        $user->firstname = $request->input('firstname');
+        $user->surname = $request->input('surname');
+        $user->email = $request->input('email');
+        $user->address = $request->input('address');
+        $user->postcode = $request->input('postcode');
+        $user->telephone = $request->input('telephone');
 
         $user->save();
-        $App->flash('global','Your details have been updated');
-        $App->response->redirect('home');
+
+        return redirect('home');
 
 
     }

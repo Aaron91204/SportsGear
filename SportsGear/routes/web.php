@@ -31,7 +31,10 @@ Route::get('/cart', 'CartController@cart');
 Route::get('/wishlist', 'WishlistController@wishlist');
 
 Route::get('/confirmation', 'UserController@confirmation');
+
 Route::get('/accountdetails','UserController@accountdetails')->name('accountdetails');
+
+Route::post('/update', 'UserController@update');
 
 
 Auth::routes();
@@ -43,6 +46,12 @@ Route::post('/submit', 'UserController@submitQuery');
 Route::prefix('/staff')->group(function(){
 
 	Route::get('/', 'StaffController@index')->name('staff.dashboard');
+
+	Route::get('/accountDetails', 'StaffController@accountDetails')->name('staff.accountDetails');
+
+	Route::get('/addStaff', 'StaffController@addStaff')->name('staff.addStaff');
+
+	Route::get('/updateProducts', 'StaffController@updateProducts')->name('staff.updateProducts');
 
 	Route::get('/login', 'Auth\StaffLoginController@showLoginForm')->name('staff.login');
 	
