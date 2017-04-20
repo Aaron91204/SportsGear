@@ -13,6 +13,7 @@
                             <thead>
                                 <tr id='tableHeader'>
                                     <td>ID</td>
+                                    <td>Customer ID</td>
                                     <td>Customer Name</td>
                                     <td>Total Cost</td>
                                 </tr>
@@ -27,6 +28,7 @@
                             ?>
                                 <tr>
                                     <td>{{ $order->id }}</td>
+                                    <td>{{$order->customer_id}}</td>
                                     <td>{{ $firstname[0]->firstname . ' ' . $surname[0]->surname}}</td>
                                     <td>£{{ $order->totalCost }}</td>
                                 </tr>
