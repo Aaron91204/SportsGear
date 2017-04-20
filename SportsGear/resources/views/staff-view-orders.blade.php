@@ -13,51 +13,53 @@
                             <thead>
                                 <tr id='tableHeader'>
                                     <td>ID</td>
-                                    <td>Customer Id</td>
+                                    <td>Customer Name</td>
                                     <td>Total Cost</td>
                                 </tr>
                             </thead>
                             <tbody>
-                            <?php 
-                            $orders = App\order::all();
-                            ?>
-                            
                             @foreach($orders as $order)
+                            <?php
+
+                                $firstname = App\User::select('firstname')->where('id', '=', $order->customer_id)->get();
+                                $surname = App\User::select('surname')->where('id', '=', $order->customer_id)->get();
+
+                            ?>
                                 <tr>
                                     <td>{{ $order->id }}</td>
-                                    <td>{{ $order->customer_id }}</td>
-                                    <td>{{ $order->totalCost }}</td>
+                                    <td>{{ $firstname[0]->firstname . ' ' . $surname[0]->surname}}</td>
+                                    <td>£{{ $order->totalCost }}</td>
                                 </tr>
                             @endforeach
                             </tbody>
                         </table>
 
                         <script>
-    function searchForID() { 
-    var search, filter, found, table, tr, td, i, j;
-    search = document.getElementById("mySearch");
-    uppercaseSearch = search.value.toUpperCase();
-    table = document.getElementById("orders");
-    
-    tr = table.getElementsByTagName("tr");
+                            function searchForID() { 
+                            var search, filter, found, table, tr, td, i, j;
+                            search = document.getElementById("mySearch");
+                            uppercaseSearch = search.value.toUpperCase();
+                            table = document.getElementById("orders");
+                            
+                            tr = table.getElementsByTagName("tr");
 
 
-    for (i = 0; i < tr.length; i++) {
-        td = tr[i].getElementsByTagName("td");
-        if (td[0].innerHTML.toUpperCase().indexOf(uppercaseSearch) > -1) {
-            found = true;
-            }
-        if (found) {
-            tr[i].style.display = "";
-            tr[0].style.display = "";
-            found = false;
-        } else {
-            tr[i].style.display = "none"; 
-        }
+                            for (i = 0; i < tr.length; i++) {
+                                td = tr[i].getElementsByTagName("td");
+                                if (td[0].innerHTML.toUpperCase().indexOf(uppercaseSearch) > -1) {
+                                    found = true;
+                                    }
+                                if (found) {
+                                    tr[i].style.display = "";
+                                    tr[0].style.display = "";
+                                    found = false;
+                                } else {
+                                    tr[i].style.display = "none"; 
+                                }
 
-    } 
-}
-</script>
+                            } 
+                        }
+                        </script>
                 </div>
             </div>
         </div>

@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Staff;
+use App\User;
+use App\Order;
 use Auth;
 
 class StaffController extends Controller
@@ -40,11 +42,16 @@ class StaffController extends Controller
         
         return view('staff-account-details');
     }
-
-    public function viewOrders(Request $request)
+    /**
+     * Show details of all customer orders
+     *
+     * @return \illuminate\Http\Response 
+     */
+    public function viewOrders()
     {
-        
-        return view('staff-view-orders');
+
+        $orders = Order::all();
+        return view('staff-view-orders')->with('orders', $orders);
     }
 
     /**
