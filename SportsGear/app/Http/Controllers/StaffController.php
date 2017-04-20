@@ -41,6 +41,12 @@ class StaffController extends Controller
         return view('staff-account-details');
     }
 
+    public function viewOrders(Request $request)
+    {
+        
+        return view('staff-view-orders');
+    }
+
     /**
      * Show add staff form.
      *

@@ -49,6 +49,8 @@ Route::prefix('/staff')->group(function(){
 
 	Route::get('/accountDetails', 'StaffController@accountDetails')->name('staff.accountDetails');
 
+	Route::get('/viewOrders', 'StaffController@viewOrders')->name('staff.viewOrders');
+
 	Route::get('/addStaff', 'StaffController@addStaff')->name('staff.addStaff');
 
 	Route::get('/updateProducts', 'StaffController@updateProducts')->name('staff.updateProducts');
