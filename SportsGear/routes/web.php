@@ -51,11 +51,15 @@ Route::prefix('/staff')->group(function(){
 
 	Route::get('/viewOrders', 'StaffController@viewOrders')->name('staff.viewOrders');
 
+	Route::get('/addProducts','StaffController@addProducts')->name('staff.addProducts'); //add products route
+
 	Route::get('/addStaff', 'StaffController@addStaff')->name('staff.addStaff');
 
 	Route::get('/updateProducts', 'StaffController@updateProducts')->name('staff.updateProducts');
 
 	Route::get('/login', 'Auth\StaffLoginController@showLoginForm')->name('staff.login');
+	
+	Route::post('/add','StaffController@addProducts'); //add method
 	
 	Route::post('/login', 'Auth\StaffLoginController@Login')->name('staff.login.submit');
 

@@ -93,6 +93,7 @@
                             <li> <a href="{{ url('staff/viewOrders') }}">View Order Details</a></li>
                             <li> <a href="#">Add Staff</a></li>
                             <li ><a href="#">Update Products</a></li>
+                            <li><a href="{{url('staff/addProducts')}}">Add Products</a></li>
                     </ul>
                 </div>
             </div>
