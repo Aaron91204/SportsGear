@@ -51,8 +51,6 @@ Route::prefix('/staff')->group(function(){
 
 	Route::get('/viewOrders', 'StaffController@viewOrders')->name('staff.viewOrders');
 
-	Route::get('/addProducts','StaffController@addProducts')->name('staff.addProducts'); //add products route
-
 	Route::get('/addStaff', 'StaffController@staffRegister');
 
 	Route::get('/updateProducts', 'StaffController@updateProducts')->name('staff.updateProducts');
@@ -63,11 +61,9 @@ Route::prefix('/staff')->group(function(){
 
 	Route::post('/clear/{id}', 'StaffController@clear')->name('staff.clear');
 	
-	Route::post('/add','StaffController@addProducts'); //add method
-	
 	Route::post('/login', 'Auth\StaffLoginController@Login')->name('staff.login.submit');
 
-	Route::post('/update', 'StaffController@update');
+	Route::post('/updatePrd', 'StaffController@updatePrd');
 
 	Route::post('/store', 'StaffController@store');
 

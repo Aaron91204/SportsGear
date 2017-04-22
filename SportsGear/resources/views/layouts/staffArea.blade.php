@@ -93,9 +93,7 @@
                             <li> <a href="{{ url('staff/viewOrders') }}">View Order Details</a></li>
                             <li> <a href="{{ url('staff/notifications') }}">Notifications ({{ App\ContactUs::count() }})</a></li>
                             <li> <a href="{{ url('staff/addStaff') }}">Add Staff</a></li>
-                            <li ><a href="#">Update Products</a></li>
-                            <li><a href="{{url('staff/addProducts')}}">Add Products</a></li>
-                    </ul>
+                            <li ><a href="{{ url('staff/updateProducts') }}">Update Products</a></li>
                 </div>
             </div>
         </nav>
