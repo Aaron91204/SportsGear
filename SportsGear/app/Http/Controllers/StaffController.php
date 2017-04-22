@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Staff;
 use App\User;
 use App\Order;
+use App\ContactUs;
+use DB;
 use Auth;
 
 class StaffController extends Controller
@@ -72,6 +74,32 @@ class StaffController extends Controller
     public function updateProducts()
     {
         return view('update-products');
+    }
+
+    /**
+     * Get all notifications from users.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function getNotifications()
+    {
+        $notifications = ContactUs::all();
+
+        return view('notifications')->with('notifications', $notifications);
+    }
+
+    /**
+     * Clears notification from contact table.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function clear(Request $request)
+    {
+        DB::table('ContactUs')->where('id','=',$request->id)->delete();
+
+        $notifications = ContactUs::all();
+
+        return view('notifications')->with('notifications', $notifications)->withMessage('Notification cleared!');
     }
 
     /**

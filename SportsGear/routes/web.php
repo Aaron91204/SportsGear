@@ -58,12 +58,18 @@ Route::prefix('/staff')->group(function(){
 	Route::get('/updateProducts', 'StaffController@updateProducts')->name('staff.updateProducts');
 
 	Route::get('/login', 'Auth\StaffLoginController@showLoginForm')->name('staff.login');
+
+	Route::get('/notifications', 'StaffController@getNotifications')->name('staff.notifications');
+
+	Route::post('/clear/{id}', 'StaffController@clear')->name('staff.clear');
 	
 	Route::post('/add','StaffController@addProducts'); //add method
 	
 	Route::post('/login', 'Auth\StaffLoginController@Login')->name('staff.login.submit');
 
 	ROute::post('/update', 'StaffController@update');
+
+
 });
 
 Route::resource('shop', 'ProductController', ['only' => ['index', 'show']]);
