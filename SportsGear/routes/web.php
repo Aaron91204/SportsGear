@@ -53,7 +53,7 @@ Route::prefix('/staff')->group(function(){
 
 	Route::get('/addProducts','StaffController@addProducts')->name('staff.addProducts'); //add products route
 
-	Route::get('/addStaff', 'StaffController@addStaff')->name('staff.addStaff');
+	Route::get('/addStaff', 'StaffController@staffRegister');
 
 	Route::get('/updateProducts', 'StaffController@updateProducts')->name('staff.updateProducts');
 
@@ -67,7 +67,9 @@ Route::prefix('/staff')->group(function(){
 	
 	Route::post('/login', 'Auth\StaffLoginController@Login')->name('staff.login.submit');
 
-	ROute::post('/update', 'StaffController@update');
+	Route::post('/update', 'StaffController@update');
+
+	Route::post('/store', 'StaffController@store');
 
 
 });

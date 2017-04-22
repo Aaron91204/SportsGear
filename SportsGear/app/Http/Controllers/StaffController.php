@@ -35,6 +35,16 @@ class StaffController extends Controller
     }
 
     /**
+     * Show the application registration form.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function staffRegister()
+    {
+        return view('staff-register');
+    }
+
+    /**
      * Show staff details form.
      *
      * @return \Illuminate\Http\Response
@@ -54,16 +64,6 @@ class StaffController extends Controller
 
         $orders = Order::all();
         return view('staff-view-orders')->with('orders', $orders);
-    }
-
-    /**
-     * Show add staff form.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function addStaff()
-    {
-        return view('add-staff');
     }
 
     /**
@@ -116,6 +116,25 @@ class StaffController extends Controller
         $user->email = $request->input('email');
 
         $user->save();
+        return view('staff');
+    }
+
+    /**
+     * Create a new Staff member.
+     *
+     * @param  Request  $data
+     * @return \Illuminate\Http\Response
+     */
+    protected function store(Request $data)
+    {
+        Staff::create([
+            'firstname' => $data->firstname,
+            'surname' => $data->surname,
+            'email' => $data->email,
+            'username' => $data->username,
+            'password' => bcrypt($data->password),
+        ]);
+
         return view('staff');
     }
 }
