@@ -7,6 +7,7 @@ use App\Staff;
 use App\User;
 use App\Order;
 use App\ContactUs;
+use App\Product;
 use DB;
 use Auth;
 
@@ -73,7 +74,8 @@ class StaffController extends Controller
      */
     public function updateProducts()
     {
-        return view('update-products');
+        $products = Product::all();
+        return view('update-products')->with('products',$products);
     }
 
     /**
@@ -101,9 +103,27 @@ class StaffController extends Controller
 
         return view('notifications')->with('notifications', $notifications)->withMessage('Notification cleared!');
     }
+/**
+     * Show update staff details.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function updatePrd(Request $request)
+    {
+        $products = Product::all();
+
+        $products->id = $request->input('id');
+        $products->product_name = $request->input('product_name');
+        $products->category = $request->input('category');
+        $products->quantity = $request->input('quantity');
+        $products->cost = $request->input('cost');
+
+        $products->save();
+        return view('staff')->withMessage('Updated Product!');
+    }
 
     /**
-     * Show update products form.
+     * Show update staff details.
      *
      * @return \Illuminate\Http\Response
      */
