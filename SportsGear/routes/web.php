@@ -34,6 +34,8 @@ Route::get('/confirmation', 'UserController@confirmation');
 
 Route::get('/accountdetails','UserController@accountdetails')->name('accountdetails');
 
+Route::get('/about', 'AboutController@index');
+
 Route::post('/update', 'UserController@update');
 
 
