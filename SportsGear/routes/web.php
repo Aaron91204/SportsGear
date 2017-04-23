@@ -9,22 +9,19 @@
 | routes are loaded by the RouteServiceProvider within a group which
 | contains the "web" middleware group. Now create something great!
 |
-*/
+ */
 
 Route::get('/', 'GuestController@home');
 
 Route::post('/', 'CartController@purchaseItems');
 
+Route::prefix('/shop')->group(function () {
 
-Route::prefix('/shop')->group(function(){
-
-	Route::get('/categories','GuestController@categories');
+	Route::get('/categories', 'GuestController@categories');
 
 	Route::get('categories/{category}', 'ProductController@category');
 
 });
-
-
 
 Route::get('/cart', 'CartController@cart');
 
@@ -32,10 +29,9 @@ Route::get('/wishlist', 'WishlistController@wishlist');
 
 Route::get('/confirmation', 'UserController@confirmation');
 
-Route::get('/accountdetails','UserController@accountdetails')->name('accountdetails');
+Route::get('/accountdetails', 'UserController@accountdetails')->name('accountdetails');
 
 Route::post('/update', 'UserController@update');
-
 
 Auth::routes();
 
@@ -43,7 +39,7 @@ Route::get('/home', 'UserController@index')->name('home');
 
 Route::post('/submit', 'UserController@submitQuery');
 
-Route::prefix('/staff')->group(function(){
+Route::prefix('/staff')->group(function () {
 
 	Route::get('/', 'StaffController@index')->name('staff.dashboard');
 
@@ -51,7 +47,7 @@ Route::prefix('/staff')->group(function(){
 
 	Route::get('/viewOrders', 'StaffController@viewOrders')->name('staff.viewOrders');
 
-	Route::get('/addProducts','StaffController@addProducts')->name('staff.addProducts'); //add products route
+	Route::get('/addProducts', 'StaffController@addProducts')->name('staff.addProducts'); //add products route
 
 	Route::get('/addStaff', 'StaffController@staffRegister');
 
@@ -62,16 +58,19 @@ Route::prefix('/staff')->group(function(){
 	Route::get('/notifications', 'StaffController@getNotifications')->name('staff.notifications');
 
 	Route::post('/clear/{id}', 'StaffController@clear')->name('staff.clear');
-	
-	Route::post('/add','StaffController@addProducts'); //add method
-	
+
+	Route::post('/add', 'StaffController@addProducts'); //add method
+
 	Route::post('/login', 'Auth\StaffLoginController@Login')->name('staff.login.submit');
 
 	Route::post('/update', 'StaffController@update');
 
 	Route::post('/store', 'StaffController@store');
 
+});
 
+Route::get('AboutUs', function () {
+	return view('AboutUs');
 });
 
 Route::resource('shop', 'ProductController', ['only' => ['index', 'show']]);

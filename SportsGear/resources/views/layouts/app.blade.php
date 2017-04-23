@@ -13,7 +13,7 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
-    
+
     <!-- Scripts -->
     <script>
         window.Laravel = {!! json_encode([
@@ -72,7 +72,7 @@
                                         Account Details
                                         </a>
                                         </li>
-                                        
+
                                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                             {{ csrf_field() }}
                                         </form>
@@ -85,8 +85,8 @@
                                             Logout
                                         </a>
                                     </li>
-                                    
-                                    
+
+
                                 </ul>
                             </li>
                         @endif
@@ -103,8 +103,17 @@
     </div>
 
     <footer>
-      <div class="container">
-        <p class="text-muted"><a href="#">About Us</a></p>
+      <div class="container" id="menu">
+
+            <hr></hr>
+    <ul>
+     <li>   <class="text-muted"><a href={{url('/AboutUs')}}>About Us</a> </li>
+      <li>  <class="text-muted"><a href={{url('/home')}}>MyAccount</a> </li>
+       <li> <class="text-muted"><a href={{url('/')}}>Home</a> </li>
+    </ul>
+
+    <hr></hr>
+
       </div>
     </footer>
 

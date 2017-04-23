@@ -26,6 +26,10 @@
  summary {
      display: block
  }
+ footer ul li{
+     display: inline;
+     margin-left: 220px;
+ }
  
  audio,
  canvas,
