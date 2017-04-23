@@ -86,13 +86,7 @@
             </table>
 
             <a href="{{ url('/shop') }}" class="btn btn-primary btn-lg">Continue Shopping</a> &nbsp;
-           
-            <form action="{{ url('/') }}" method="POST">
-                {!! csrf_field() !!}
-
-                <input type="submit" class="btn btn-success btn-lg" value="Proceed to Checkout">
-
-            </form>
+                     
             <div style="float:right">
                 <form action="{{ url('/emptyCart') }}" method="POST">
                     {!! csrf_field() !!}
@@ -107,9 +101,49 @@
             <a href="{{ url('/shop') }}" class="btn btn-primary btn-lg">Continue Shopping</a>
 
         @endif
+    <div class="spacer"></div>
+    <button 
+   type="button" 
+   class="btn btn-primary btn-lg" 
+   data-toggle="modal" 
+   data-target="#favoritesModal">
+  Proceed to CheckOut
+</button>
+<div class="modal fade" id="favoritesModal" 
+     tabindex="-1" role="dialog" 
+     aria-labelledby="favoritesModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" 
+          data-dismiss="modal" 
+          aria-label="Close">
+          <span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" 
+        id="favoritesModalLabel">Your Order</h4>
+      </div>
+      <div class="modal-body">
+        <p>
+        Please double check your order before clicking Complete Order. 
+        To do this select the Close button to check your order. 
+        After you click Complete Order please check your account for details on your order.
+       </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" 
+           class="btn btn-default" 
+           data-dismiss="modal">Review Order</button>
+        <span class="pull-right">
+          <form action="{{ url('/') }}" method="POST">
+                {!! csrf_field() !!}
 
-        <div class="spacer"></div>
-
+                <input type="submit" class="btn btn-success btn-lg" value="Complete Order">
+            </form>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
     </div> <!-- end container -->
 
 @endsection

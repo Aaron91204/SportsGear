@@ -23,7 +23,6 @@ class CartController extends Controller
     {
         return view('cart');
     }
-
     /**
      * Add an item to your cart. Also check to see if an item
      * already exists in your cart. (May remove that functionality)
@@ -153,9 +152,11 @@ class CartController extends Controller
 
             $productOrder ->save();
         }
+        
 
         Cart::destroy();
-        return redirect('/')->withSuccessMessage('Your Order has been Processed');
+    return redirect('accountdetails')->withSuccessMessage('Your Order has been Processed');
 
     }
+
 }

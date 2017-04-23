@@ -64,4 +64,30 @@
         </div>
     </div>
 </div>
+<div class="container">
+    <div class="panel panel-default">
+        <div class ="panel-heading">Your Orders</div>
+          <div class ="panel-body">
+          Here you can view your orders
+          <br>
+          <br>
+          <form action="{{ url('update') }}" method ="POST">
+            <div class="form-group">
+              <label for="firstname" class="col-md-4 control-label">Order ID</label> <!--first name label -->
+                <div class="col-md-6">
+                    <input id="firstname" type="text" class="form-control" name="firstname" value="{{Auth::user()->firstname}}">
+                </div>
+            </div>
+
+            <div class="form-group">
+              <label for="surname" class="col-md-4 control-label">Total Cost</label>
+                <div class="col-md-6">
+                  <input id="surname" type="text" class="form-control" name="surname" value="{{Auth::user()->surname}}" >
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 @endsection
