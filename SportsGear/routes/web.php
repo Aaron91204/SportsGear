@@ -47,8 +47,11 @@ Route::prefix('/staff')->group(function () {
 
 	Route::get('/viewOrders', 'StaffController@viewOrders')->name('staff.viewOrders');
 
+<<<<<<< HEAD
 	Route::get('/addProducts', 'StaffController@addProducts')->name('staff.addProducts'); //add products route
 
+=======
+>>>>>>> 01a5926248f0f37015a6500fea16340962beaa29
 	Route::get('/addStaff', 'StaffController@staffRegister');
 
 	Route::get('/updateProducts', 'StaffController@updateProducts')->name('staff.updateProducts');
@@ -58,12 +61,16 @@ Route::prefix('/staff')->group(function () {
 	Route::get('/notifications', 'StaffController@getNotifications')->name('staff.notifications');
 
 	Route::post('/clear/{id}', 'StaffController@clear')->name('staff.clear');
+<<<<<<< HEAD
 
 	Route::post('/add', 'StaffController@addProducts'); //add method
 
+=======
+	
+>>>>>>> 01a5926248f0f37015a6500fea16340962beaa29
 	Route::post('/login', 'Auth\StaffLoginController@Login')->name('staff.login.submit');
 
-	Route::post('/update', 'StaffController@update');
+	Route::post('/updatePrd', 'StaffController@updatePrd');
 
 	Route::post('/store', 'StaffController@store');
 
