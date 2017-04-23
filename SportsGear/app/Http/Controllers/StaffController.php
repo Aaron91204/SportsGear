@@ -44,7 +44,6 @@ class StaffController extends Controller
     {
         return view('staff-register');
     }
-
     /**
      * Show staff details form.
      *
@@ -74,8 +73,10 @@ class StaffController extends Controller
      */
     public function updateProducts()
     {
-        $products = Product::all();
-        return view('update-products')->with('products',$products);
+        $products=Product::all();
+        $prodCategory=Product::select('category')->distinct()->orderBy('category')->get();
+        //return($prodCategory);
+        return view('update-products')->with('products',$products)->with('prodCategory',$prodCategory);
     }
 
     /**
@@ -110,16 +111,7 @@ class StaffController extends Controller
      */
     public function updatePrd(Request $request)
     {
-        $products = Product::all();
-
-        $products->id = $request->input('id');
-        $products->product_name = $request->input('product_name');
-        $products->category = $request->input('category');
-        $products->quantity = $request->input('quantity');
-        $products->cost = $request->input('cost');
-
-        $products->save();
-        return view('staff')->withMessage('Updated Product!');
+     
     }
 
     /**
