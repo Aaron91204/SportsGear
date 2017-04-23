@@ -101,6 +101,9 @@
             <a href="{{ url('/shop') }}" class="btn btn-primary btn-lg">Continue Shopping</a>
 
         @endif
+        <br>
+        <br>
+        <br>
     <div class="spacer"></div>
     <button 
    type="button" 
@@ -125,7 +128,9 @@
       <div class="modal-body">
         <p>
         Please double check your order before clicking Complete Order. 
+        <br>
         To do this select the Close button to check your order. 
+        <br>
         After you click Complete Order please check your account for details on your order.
        </p>
       </div>

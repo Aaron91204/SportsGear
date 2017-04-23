@@ -17,9 +17,15 @@
 
         <div class="jumbotron text-center clearfix">
             <h2>Sports Gear</h2>
-            <p>Below is some examples of products which are available</p>
-            <p>For now, we'll just have the full list of products
-            </p>
+            <p>We have a wide variety of items available to our customers</p>
+            <br>
+            <p>Our categories range from Football to BasketBall</p>
+            <br>
+            <p>To check out all our categories check out the shop section in the menu bar</p>
+            <br>
+            <p>You must make an account before you are able to purchase our products</p>
+            <br>
+            <p>Est. 2017</p>
         </div> <!-- end jumbotron -->
 
         @foreach ($products->chunk(4) as $items)
