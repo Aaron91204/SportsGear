@@ -16,8 +16,8 @@
         @endif
 
         <div class="jumbotron text-center clearfix">
-            <h2>This will be the Home Page</h2>
-            <p>Here we'll have a selection of products (picked at random) to display to the customer.</p>
+            <h2>Sports Gear</h2>
+            <p>Below is some examples of products which are available</p>
             <p>For now, we'll just have the full list of products
             </p>
         </div> <!-- end jumbotron -->
