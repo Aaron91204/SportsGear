@@ -85,7 +85,7 @@
                 </tbody>
             </table>
 
-            <a href="{{ url('/shop') }}" class="btn btn-primary btn-lg">Continue Shopping</a> &nbsp;
+            <a href="{{ url('/shop/categories') }}" class="btn btn-primary btn-lg">Continue Shopping</a> &nbsp;
                      
             <div style="float:right">
                 <form action="{{ url('/emptyCart') }}" method="POST">

@@ -104,7 +104,7 @@
 
     <footer>
       <div class="container">
-        <p class="text-muted"><a href="#">About Us</a></p>
+        <!--<p class="text-muted"><a href="#">About Us</a></p>-->
       </div>
     </footer>
 
