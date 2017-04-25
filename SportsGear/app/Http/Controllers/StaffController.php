@@ -8,6 +8,7 @@ use App\User;
 use App\Order;
 use App\ContactUs;
 use App\Product;
+use App\Requests;
 use DB;
 use Auth;
 
@@ -71,14 +72,9 @@ class StaffController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function updateProductsCategory()
-    {
-        $products= Product::select('category')->distinct()->orderBy('category')->get();
-        return view('update-products-category')->with('products',$products);
-    }
     public function updateProducts(){
-        $products=Product::all();
-        return view('update-products')->with('products',$products);
+        $product=Product::all();
+        return view('update-products')->with('product',$product);
     }
 
     /**
@@ -91,6 +87,23 @@ class StaffController extends Controller
         $notifications = ContactUs::all();
 
         return view('notifications')->with('notifications', $notifications);
+    }
+     /**
+     * Updates product details.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function updateProd(Request $request)
+    {
+        $product = Product::where('id', $request->id)->get();
+    
+        $product->product_Name = $request->input('product_name');
+        $product->category = $request->input('category');
+        $product->quantity = $request->input('quantity');
+        $product->cost = $request->input('cost');
+
+        $product->save();
+        return view('update-products');
     }
 
     /**
@@ -106,16 +119,6 @@ class StaffController extends Controller
 
         return view('notifications')->with('notifications', $notifications)->withMessage('Notification cleared!');
     }
-/**
-     * Show update staff details.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function updatePrd(Request $request)
-    {
-     
-    }
-
     /**
      * Show update staff details.
      *

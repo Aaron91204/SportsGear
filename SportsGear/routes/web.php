@@ -49,13 +49,14 @@ Route::prefix('/staff')->group(function () {
 
 	Route::get('/addStaff', 'StaffController@staffRegister');
 
-	Route::get('/updateProductsCategory', 'StaffController@updateProductsCategory')->name('staff.updateProductsCategory');
 
 	Route::get('/updateProducts','StaffController@updateProducts')->name('staff.updateProducts');
 
 	Route::get('/login', 'Auth\StaffLoginController@showLoginForm')->name('staff.login');
 
 	Route::get('/notifications', 'StaffController@getNotifications')->name('staff.notifications');
+	
+	Route::post('/updateProd','StaffController@updateProd');
 
 	Route::post('/clear/{id}', 'StaffController@clear')->name('staff.clear');
 
