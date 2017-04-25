@@ -17,7 +17,7 @@
 
        <div class="jumbotron text-center clearfix">
             <h2>Categories</h2>
-            <p>Categories List</p>
+            <p>These are the various categories of sports equipment that we currently stock</p>
             
         </div> <!-- end jumbotron -->
 
