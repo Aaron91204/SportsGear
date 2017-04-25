@@ -49,7 +49,9 @@ Route::prefix('/staff')->group(function () {
 
 	Route::get('/addStaff', 'StaffController@staffRegister');
 
-	Route::get('/updateProducts', 'StaffController@updateProducts')->name('staff.updateProducts');
+	Route::get('/updateProductsCategory', 'StaffController@updateProductsCategory')->name('staff.updateProductsCategory');
+
+	Route::get('/updateProducts','StaffController@updateProducts')->name('staff.updateProducts');
 
 	Route::get('/login', 'Auth\StaffLoginController@showLoginForm')->name('staff.login');
 

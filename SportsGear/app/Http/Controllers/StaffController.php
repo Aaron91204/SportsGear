@@ -71,12 +71,14 @@ class StaffController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function updateProducts()
+    public function updateProductsCategory()
     {
+        $products= Product::select('category')->distinct()->orderBy('category')->get();
+        return view('update-products-category')->with('products',$products);
+    }
+    public function updateProducts(){
         $products=Product::all();
-        $prodCategory=Product::select('category')->distinct()->orderBy('category')->get();
-        //return($prodCategory);
-        return view('update-products')->with('products',$products)->with('prodCategory',$prodCategory);
+        return view('update-products')->with('products',$products);
     }
 
     /**
