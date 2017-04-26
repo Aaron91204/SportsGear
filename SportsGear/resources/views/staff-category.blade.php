@@ -34,9 +34,9 @@
 
                     <td><input id="slug[{{ $product->id}}]" type="text" class="form-control" name="slug[{{ $product->id}}]" value="{{ $product->slug }}"></td>
 
-                    <td><input id="quantity[{{ $product->id}}]" type="number" class="form-control" name="quantity[{{ $product->id}}]" value="{{ $product->quantity}}"></td>
+                    <td><input id="quantity[{{ $product->id}}]" type="number" min="0" class="form-control" name="quantity[{{ $product->id}}]" value="{{ $product->quantity}}"></td>
 
-                    <td><input id="cost[{{ $product->id}}]" type="number" class="form-control" name="cost[{{ $product->id}}]" value="{{ $product->cost }}"></td>
+                    <td><input id="cost[{{ $product->id}}]" type="number" step="0.01" min="0" class="form-control" name="cost[{{ $product->id}}]" value="{{ $product->cost }}"></td>
                     <td>
                         
 
