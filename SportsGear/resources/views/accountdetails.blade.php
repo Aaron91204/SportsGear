@@ -120,13 +120,6 @@
   </div>
 </div>
 
-                <div class="form-group">
-                    <div class="col-md-6 col-md-offset-4">
-                        {!! csrf_field() !!}
-                        <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                        <input type="submit" class="btn btn-primary" value="Update">
-                    </div>
-                </div>
             </form>
             </div>
         </div>
