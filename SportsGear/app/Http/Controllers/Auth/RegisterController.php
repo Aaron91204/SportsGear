@@ -48,7 +48,7 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'firstname' => 'required|max:255|string|',//regex:%[^0-9$]%', //will not accept a number as correct data
+            'firstname' => 'required|max:255|string|',//will not accept a number as correct data
             'surname' => 'required|max:255|regex:%[^0-9$]%', //will not accept a number as correct data
             'address' => 'required|max:255',
             'postcode' => 'required|size:8|regex:^[a-zA-Z]{1,2}[0-9][0-9A-Za-z]{0,1} {0,1}[0-9][A-Za-z]{2}$^', //format of AA45 8TY
