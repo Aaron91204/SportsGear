@@ -10,7 +10,6 @@
 | contains the "web" middleware group. Now create something great!
 |
  */
-
 Route::get('/', 'GuestController@home');
 
 Route::post('/', 'CartController@purchaseItems');
@@ -49,16 +48,15 @@ Route::prefix('/staff')->group(function () {
 
 	Route::get('/addStaff', 'StaffController@staffRegister');
 
-
-	Route::get('/updateProducts','StaffController@categories')->name('staff.updateProducts');
+	Route::get('/updateProducts', 'StaffController@categories')->name('staff.updateProducts');
 
 	Route::get('updateProducts/{category}', 'StaffController@category');
 
 	Route::get('/login', 'Auth\StaffLoginController@showLoginForm')->name('staff.login');
 
 	Route::get('/notifications', 'StaffController@getNotifications')->name('staff.notifications');
-	
-	Route::post('/updateProd','StaffController@updateProd');
+
+	Route::post('/updateProd', 'StaffController@updateProd');
 
 	Route::post('/clear/{id}', 'StaffController@clear')->name('staff.clear');
 
