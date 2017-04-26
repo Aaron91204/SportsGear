@@ -13,42 +13,42 @@
             <div class="form-group">
               <label for="firstname" class="col-md-4 control-label">First Name</label> <!--first name label -->
                 <div class="col-md-6">
-                    <input id="firstname" type="text" class="form-control" name="firstname" value="{{Auth::user()->firstname}}">
+                    <input id="firstname" type="text" class="form-control" name="firstname" value="{{Auth::user()->firstname}}" readonly>
                 </div>
             </div>
 
             <div class="form-group">
               <label for="surname" class="col-md-4 control-label">Surname</label>
                 <div class="col-md-6">
-                  <input id="surname" type="text" class="form-control" name="surname" value="{{Auth::user()->surname}}" >
+                  <input id="surname" type="text" class="form-control" name="surname" value="{{Auth::user()->surname}}" readonly>
                 </div>
             </div>
 
             <div class="form-group">
               <label for="address" class="col-md-4 control-label">Email</label>
                 <div class="col-md-6">
-                  <input id="email" type="text" class="form-control" name="email" value="{{Auth::user()->email}}">
+                  <input id="email" type="text" class="form-control" name="email" value="{{Auth::user()->email}}" readonly>
                 </div>
             </div>
 
              <div class="form-group">
               <label for="address" class="col-md-4 control-label">Address</label>
                 <div class="col-md-6">
-                  <input id="address" type="text" class="form-control" name="address" value="{{Auth::user()->address}}">
+                  <input id="address" type="text" class="form-control" name="address" value="{{Auth::user()->address}}" readonly>
                 </div>
             </div>
 
             <div class="form-group">
               <label for="postcode" class="col-md-4 control-label">Postcode</label>
                 <div class="col-md-6">
-                  <input id="postcode" type="text" class="form-control" name="postcode" value="{{Auth::user()->postcode}}">
+                  <input id="postcode" type="text" class="form-control" name="postcode" value="{{Auth::user()->postcode}}" readonly>
                 </div>
             </div>
 
               <div class="form-group">
               <label for="telephone" class="col-md-4 control-label">Telephone</label>
                 <div class="col-md-6">
-                  <input id="telephone" type="text" class="form-control" name="telephone" value="{{Auth::user()->telephone}}">
+                  <input id="telephone" type="number" class="form-control" name="telephone" value="{{Auth::user()->telephone}}" readonly>
                 </div>
             </div>
             <button 
@@ -81,27 +81,27 @@
 
       <div class="col-md-6">
       <label for="firstname" class="col-md-4 control-label">First Name</label>
-                    <input id="firstname" type="text" class="form-control" name="firstname" value="{{Auth::user()->firstname}}">
+                    <input id="firstname" type="text" class="form-control" name="firstname" value="{{Auth::user()->firstname}}" required autofocus>
                 </div>
       <div class="col-md-6">
       <label for="firstname" class="col-md-4 control-label">Surname</label>
-                  <input id="surname" type="text" class="form-control" name="surname" value="{{Auth::user()->surname}}" >
+                  <input id="surname" type="text" class="form-control" name="surname" value="{{Auth::user()->surname}}" required autofocus>
                 </div>
       <div class="col-md-6">
       <label for="firstname" class="col-md-4 control-label">Email</label>
-                  <input id="email" type="text" class="form-control" name="email" value="{{Auth::user()->email}}">
+                  <input id="email" type="text" class="form-control" name="email" value="{{Auth::user()->email}}" required autofocus>
                 </div>
       <div class="col-md-6">
       <label for="firstname" class="col-md-4 control-label">Address</label>
-                  <input id="address" type="text" class="form-control" name="address" value="{{Auth::user()->address}}">
+                  <input id="address" type="text" class="form-control" name="address" value="{{Auth::user()->address}}" required autofocus>
                 </div>
       <div class="col-md-6">
       <label for="firstname" class="col-md-4 control-label">Postcode</label>
-                  <input id="postcode" type="text" class="form-control" name="postcode" value="{{Auth::user()->postcode}}">
+                  <input id="postcode" type="text" class="form-control" name="postcode" value="{{Auth::user()->postcode}}" required autofocus>
                 </div>
       <div class="col-md-6">
       <label for="firstname" class="col-md-4 control-label">Telephone</label>
-                  <input id="telephone" type="text" class="form-control" name="telephone" value="{{Auth::user()->telephone}}">
+                  <input id="telephone" type="number" class="form-control" name="telephone" value="{{Auth::user()->telephone}}" required autofocus>
                 </div>
 
 
