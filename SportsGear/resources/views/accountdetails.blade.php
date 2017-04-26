@@ -52,12 +52,13 @@
                 </div>
             </div>
             <button 
-   type="button" 
-   class="btn btn-primary btn-lg" 
-   data-toggle="modal" 
-   data-target="#favoritesModal">
-  Update Information
-</button>
+               type="button" 
+               class="btn btn-primary btn-lg" 
+               data-toggle="modal" 
+               data-target="#favoritesModal">
+              Update Information
+            </button>
+            
 <div class="modal fade" id="favoritesModal" 
      tabindex="-1" role="dialog" 
      aria-labelledby="favoritesModalLabel">

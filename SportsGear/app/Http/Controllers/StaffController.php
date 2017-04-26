@@ -78,6 +78,17 @@ class StaffController extends Controller
     }
 
     /**
+     * Display the specified category view.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function category(Request $request)
+    {   
+        $products = Product::where('category', '=', $request->category)->get();
+        return view('staff-category')->with('products', $products);
+    }
+
+    /**
      * Get all notifications from users.
      *
      * @return \Illuminate\Http\Response
@@ -91,19 +102,33 @@ class StaffController extends Controller
      /**
      * Updates product details.
      *
+     * @param Request $request
+     * @param String $id
      * @return \Illuminate\Http\Response
      */
-    public function updateProd(Request $request)
+    public function storeUpdateProduct(Request $request, $id)
     {
-        $product = Product::where('id', $request->id)->get();
-    
-        $product->product_Name = $request->input('product_name');
-        $product->category = $request->input('category');
-        $product->quantity = $request->input('quantity');
-        $product->cost = $request->input('cost');
+
+        $product = Product::where('id', '=', $id)->firstOrFail();
+
+        $product->product_name = $request->product_name[$id];
+        $product->slug = $request->slug[$id];
+        $product->quantity = $request->quantity[$id];
+        $product->cost = $request->cost[$id];
 
         $product->save();
-        return view('update-products');
+        
+        return redirect()->route('staff.updateProducts');
+    }
+
+    /**
+     * Show the categories page
+     *
+     * @return \Illuminate\Http\Response
+     */    
+    public function categories(){
+        $products=Product::select('category')->distinct()->orderBy('category')->get();
+        return view('staff-categories')->with('products',$products);
     }
 
     /**
