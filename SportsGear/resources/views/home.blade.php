@@ -16,14 +16,14 @@
                         <br>
                         Contact Us Form
                         <br>
-                        If you have any questons for us please feel free to use the following form to contact us
+                        If you have any questions for us please feel free to use the following form to contact us
                         <br>
                         <br>
                         <div class="form-group{{ $errors->has('firstname') ? ' has-error' : '' }}">
                                 <label for="firstname" class="col-md-4 control-label">First Name</label>
 
                                 <div class="col-md-6">
-                                    <input id="firstname" type="text" class="form-control" name="firstname" value="{{ old('firstname') }}" required autofocus>
+                                    <input id="firstname" type="text" class="form-control" name="firstname" placeholder ="Enter Name.." value="{{ old('firstname') }}" required autofocus>
 
                                     @if ($errors->has('firstname'))
                                         <span class="help-block">
@@ -39,7 +39,7 @@
                                 <label for="email" class="col-md-4 control-label">Email</label>
 
                                 <div class="col-md-6">
-                                    <input id="email" type="text" class="form-control" name="email" value="{{ old('email') }}" required autofocus>
+                                    <input id="email" type="email" class="form-control" name="email" placeholder="example@email.com" value="{{ old('email') }}" required autofocus>
 
                                     @if ($errors->has('email'))
                                         <span class="help-block">

@@ -15,8 +15,8 @@
                         <li>Update their account details</li>
                         <li>View and search customer order history</li>
                         <li>Add new staff members</li>
-                        <li>View queries sumbitted by customers on the 'contact us' form</li>
-                        <li>Update exisiting product details</li>
+                        <li>View queries submitted by customers on the 'contact us' form</li>
+                        <li>Update existing product details</li>
                     </ul>
                     <hr/>
                 </div>
