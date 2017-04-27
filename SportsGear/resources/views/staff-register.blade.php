@@ -7,25 +7,9 @@
             <div class="panel panel-default">
                 <div class="panel-heading">Staff Register</div>
                 <div class="panel-body">
-{{--}}
-
-                @if ($errors->has())
-                <div class="alert-danger">
-                @foreach ($errors->all() as $error)
-                    {{ $error }}<br>
-                    @endforeach
-                    </div>
-                    @endif
-{{--}}
 
                     <form class="form-horizontal" role="form" method="POST" action="{{ url('staff/store') }}">
                         {{ csrf_field() }}
-
-                {{--}}        <div class="form-group @if ($errors->has('firstname')) has-error @endif">
-        <label for="firstname">FirstName</label>
-        <input type="text" id="firstname" class="form-control" name="firstname" placeholder="Somebody Awesome">
-        @if ($errors->has('firstname')) <p class="help-block">{{ $errors->first('firstname') }}</p> @endif
-    </div>{{--}}
 
                         <div class="form-group{{ $errors->has('firstname') ? ' has-error' : '' }}">
                             <label for="name" class="col-md-4 control-label">First Name</label>

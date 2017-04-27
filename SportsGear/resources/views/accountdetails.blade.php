@@ -51,25 +51,25 @@
                   <input id="telephone" type="number" class="form-control" name="telephone" value="{{Auth::user()->telephone}}" readonly>
                 </div>
             </div>
-            <button 
-               type="button" 
-               class="btn btn-primary btn-lg" 
-               data-toggle="modal" 
+            <button
+               type="button"
+               class="btn btn-primary btn-lg"
+               data-toggle="modal"
                data-target="#favoritesModal">
               Update Information
             </button>
-            
-<div class="modal fade" id="favoritesModal" 
-     tabindex="-1" role="dialog" 
+
+<div class="modal fade" id="favoritesModal"
+     tabindex="-1" role="dialog"
      aria-labelledby="favoritesModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <button type="button" class="close" 
-          data-dismiss="modal" 
+        <button type="button" class="close"
+          data-dismiss="modal"
           aria-label="Close">
           <span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" 
+        <h4 class="modal-title"
         id="favoritesModalLabel">Your Details</h4>
       </div>
       <div class="modal-body">
@@ -106,8 +106,8 @@
 
 
       <div class="modal-footer">
-        <button type="button" 
-           class="btn btn-default" 
+        <button type="button"
+           class="btn btn-default"
            data-dismiss="modal">Review Details</button>
         <span class="pull-right">
           <form action="{{ url('/') }}" method="POST">
@@ -134,16 +134,16 @@
           <br>
           <form action="{{ url('update') }}" method ="POST">
             <div class="form-group">
-              <label for="firstname" class="col-md-4 control-label">Order ID</label> <!--first name label -->
+              <label for="Order" class="col-md-4 control-label">Order ID</label>
                 <div class="col-md-6">
-                    <input id="firstname" type="text" class="form-control" name="firstname" value="{{Auth::user()->firstname}}">
+                    <input id="Order" type="text" class="form-control" name="Order" value="{{Auth::user()->id}}">
                 </div>
             </div>
 
             <div class="form-group">
-              <label for="surname" class="col-md-4 control-label">Total Cost</label>
+              <label for="Cost" class="col-md-4 control-label">Total Cost</label>
                 <div class="col-md-6">
-                  <input id="surname" type="text" class="form-control" name="surname" value="{{Auth::user()->surname}}" >
+                  <input id="Cost" type="text" class="form-control" name="Cost" value="{{Cart::instance()->subtotal}}" >
                 </div>
             </div>
             </div>
