@@ -158,7 +158,7 @@ class StaffController extends Controller
         $user->email = $request->input('email');
 
         $user->save();
-        return view('staff');
+        return redirect('staff');
     }
 
     /**
