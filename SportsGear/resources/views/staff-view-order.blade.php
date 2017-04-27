@@ -47,16 +47,20 @@
 
 
                                 @foreach ($productOrders as $productorder)
-                                        <?php 
+                                        <?php
+                                        
                                         $productid = $productorder->product_id;
                                         $productquant = $productorder->quantity;
                                         ?>
                                         @foreach ($products as $product)
                                             @if ($product->id == $productorder->product_id)
+                                            @if ($productorder->order_id == $id)
                                                 <?php $productname = $product->product_name; ?>
+                                                <tr><td> {{ $productname }} * {{ $productquant }}</td></tr>
+                                            @endif
                                             @endif
                                         @endforeach
-                                        <tr><td> {{ $productname }} * {{ $productquant }}</td></tr>
+                                        
 
                                 @endforeach
                             </tbody>
