@@ -125,7 +125,7 @@
         </div>
     </div>
 </div>
-<div class="container">
+<!-- <div class="container">
     <div class="panel panel-default">
         <div class ="panel-heading">Your Orders</div>
           <div class ="panel-body">
@@ -149,6 +149,6 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 
 @endsection

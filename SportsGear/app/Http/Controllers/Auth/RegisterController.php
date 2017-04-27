@@ -52,7 +52,7 @@ class RegisterController extends Controller
             'surname' => 'required|max:255|regex:%[^0-9$]%', //will not accept a number as correct data
             'address' => 'required|max:255',
             'postcode' => 'required|size:8|regex:/^[a-zA-Z]{1,2}[0-9][0-9A-Za-z]{0,1} {0,1}[0-9][A-Za-z]{2}$/', //format of AA45 8TY
-            'telephone' => 'required|numeric|size:11', //phone number must be size 11 and numeric
+            'telephone' => 'required|regex:/(0)[0-9]{10}/', //phone number must be size 11 and numeric
             'email' => 'required|email|max:255|unique:users',
             'username'=> 'required|max:255',
             'password' => 'required|confirmed|min:8|regex:/^(?=\S*[a-z])(?=\S*[A-Z])(?=\S*[\d])\S*$/',

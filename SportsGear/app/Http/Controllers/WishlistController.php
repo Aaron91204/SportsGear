@@ -33,13 +33,13 @@ class WishlistController extends Controller
         });
 
         if (!$duplicates->isEmpty()) {
-            return redirect('shop')->withSuccessMessage('Item is already in your wishlist!');
+            return redirect('wishlist')->withSuccessMessage('Item is already in your wishlist!');
         }
 
         Cart::instance('wishlist')->add($request->id, $request->product_name, 1,  $request->cost)
                                   ->associate('App\Product');
 
-        return redirect('shop')->withSuccessMessage('Item was added to your wishlist!');
+        return redirect('wishlist')->withSuccessMessage('Item was added to your wishlist!');
     }
 
     /**
