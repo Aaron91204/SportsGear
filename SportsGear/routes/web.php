@@ -68,6 +68,8 @@ Route::prefix('/staff')->group(function () {
 
 	Route::post('/storeUpdateProduct/{id}', 'StaffController@storeUpdateProduct')->name('staff.storeUpdateProduct');
 
+	
+
 });
 
 Route::get('/aboutUs', function () {
@@ -75,6 +77,7 @@ Route::get('/aboutUs', function () {
 });
 
 Route::resource('shop', 'ProductController', ['only' => ['index', 'show']]);
+Route::resource('staff', 'StaffController');
 
 //
 
