@@ -46,6 +46,8 @@ Route::prefix('/staff')->group(function () {
 
 	Route::get('/viewOrders', 'StaffController@viewOrders')->name('staff.viewOrders');
 
+	Route::resource('staff', 'StaffController');
+
 	Route::get('/addStaff', 'StaffController@staffRegister');
 
 	Route::get('/updateProducts', 'StaffController@categories')->name('staff.updateProducts');
@@ -77,7 +79,7 @@ Route::get('/aboutUs', function () {
 });
 
 Route::resource('shop', 'ProductController', ['only' => ['index', 'show']]);
-Route::resource('staff', 'StaffController');
+
 
 //
 
