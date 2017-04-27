@@ -36,6 +36,16 @@ class StaffController extends Controller
         return view('staff');
     }
 
+
+    public function show($id)
+    {
+        $order = Order::find($id);
+        return view('staff-view-order')->withOrder($order);
+        /*
+        $order = Order::find($id);
+        return view('staff-view-order')->with('staff.show', $order);
+        */
+    }
     /**
      * Show the application registration form.
      *
@@ -66,6 +76,13 @@ class StaffController extends Controller
         $orders = Order::all();
         return view('staff-view-orders')->with('orders', $orders);
     }
+    /*
+    public function viewOrder($id)
+    {
+        $order = Order::all();
+        return view('staff-view-order')->with('order', $order);
+    }
+    */
 
     /**
      * Show update products form.
