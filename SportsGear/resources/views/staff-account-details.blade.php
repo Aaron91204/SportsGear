@@ -14,7 +14,7 @@
                             <label for="name" class="col-md-4 control-label">First Name</label>
 
                             <div class="col-md-6">
-                                <input id="firstname" type="text" class="form-control" name="firstname" value="{{ Auth::user()->firstname }}" >
+                                <input id="firstname" type="text" class="form-control" name="firstname" value="{{ Auth::user()->firstname }}" required>
 
                                 @if ($errors->has('firstname'))
                                     <span class="help-block">
@@ -29,7 +29,7 @@
                             <label for="surname" class="col-md-4 control-label">Surname</label>
 
                             <div class="col-md-6">
-                                <input id="surname" type="text" class="form-control" name="surname" value="{{ Auth::user()->surname }}" >
+                                <input id="surname" type="text" class="form-control" name="surname" value="{{ Auth::user()->surname }}" required>
 
                                 @if ($errors->has('surname'))
                                     <span class="help-block">
@@ -43,7 +43,7 @@
                             <label for="email" class="col-md-4 control-label">E-Mail Address</label>
 
                             <div class="col-md-6">
-                                <input id="email" type="email" class="form-control" name="email" placeholder="example@email.com" value="{{Auth::user()->email}}" >
+                                <input id="email" type="email" class="form-control" name="email" placeholder="example@email.com" value="{{Auth::user()->email}}" required>
 
                                 @if ($errors->has('email'))
                                     <span class="help-block">
