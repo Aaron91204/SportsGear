@@ -98,7 +98,7 @@
         @else
 
             <h3>You have no items in your shopping cart</h3>
-            <a href="{{ url('/shop') }}" class="btn btn-primary btn-lg">Continue Shopping</a>
+            <a href="{{ url('/shop/categories') }}" class="btn btn-primary btn-lg">Continue Shopping</a>
 
         @endif
         <br>

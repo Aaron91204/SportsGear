@@ -67,6 +67,7 @@
                                         </a>
                                     </li>
 
+
                                     <li>
                                         <a href="{{route('accountdetails')}}">
                                         Account Details
@@ -90,9 +91,12 @@
                                 </ul>
                             </li>
                         @endif
+                        <li> <a href="{{url('/aboutUs')}}">About Us</a></li>
                             <li> <a href="{{url('/shop/categories')}}">Shop</a></li>
                             <li ><a href="{{ url('/wishlist') }}">Wishlist ({{ Cart::instance('wishlist')->count(false) }})</a></li>
                             <li ><a href="{{ url('/cart') }}">Cart ({{ Cart::instance('default')->count(false) }})</a></li>
+                           
+                        
                     </ul>
                 </div>
             </div>
@@ -101,12 +105,6 @@
 
         @yield('content')
     </div>
-
-    <footer>
-      <div class="container">
-        <p class="text-muted"><a href="/aboutUs">About Us</a></p>
-      </div>
-    </footer>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>

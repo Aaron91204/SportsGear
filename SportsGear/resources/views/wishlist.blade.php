@@ -76,7 +76,7 @@
         @else
 
             <h3>You have no items in your Wishlist</h3>
-            <a href="/shop" class="btn btn-primary btn-lg">Continue Shopping</a>
+            <a href="{{ url('/shop/categories') }}" class="btn btn-primary btn-lg">Continue Shopping</a>
 
         @endif
 
