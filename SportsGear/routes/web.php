@@ -54,6 +54,8 @@ Route::prefix('/staff')->group(function () {
 
 	Route::get('/login', 'Auth\StaffLoginController@showLoginForm')->name('staff.login');
 
+	Route::post('/update','StaffController@update')->name('staff.update');
+
 	Route::get('/notifications', 'StaffController@getNotifications')->name('staff.notifications');
 
 	Route::post('/updateProd', 'StaffController@updateProd');
