@@ -16,6 +16,7 @@
                                     <td>Customer ID</td>
                                     <td>Customer Name</td>
                                     <td>Total Cost</td>
+                                    <td>View Order</td>
                                 </tr>
                             </thead>
                             <tbody>
@@ -24,6 +25,8 @@
 
                                 $firstname = App\User::select('firstname')->where('id', '=', $order->customer_id)->get();
                                 $surname = App\User::select('surname')->where('id', '=', $order->customer_id)->get();
+                                $products = App\Product::all();
+                                $productOrders = App\ProductOrder::all();
 
                             ?>
                                 <tr>
@@ -31,6 +34,7 @@
                                     <td>{{$order->customer_id}}</td>
                                     <td>{{ $firstname[0]->firstname . ' ' . $surname[0]->surname}}</td>
                                     <td>£{{ $order->totalCost }}</td>
+                                    <td><a href="{{ route('staff.show', $order->id) }}" class="btn btn-default btn-sm">View</a></td>
                                 </tr>
                             @endforeach
                             </tbody>
